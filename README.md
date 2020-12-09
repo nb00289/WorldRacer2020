@@ -1,2 +1,2 @@
 # WorldRacer2020
-This is an amazing app
+World Racer 2020. This game is similar to Gran Trak 10. We have different difficulties as well as different tracks. It is a single player game where the player is racing against the clock. 
