@@ -1,6 +1,6 @@
 WorldRacer2020 = {
     init: function() {
-      let x = 1
+      let x = 3
       //i made an edit -Bo//
     }
   }
