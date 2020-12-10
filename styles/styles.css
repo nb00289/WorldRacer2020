@@ -1,3 +1,17 @@
-.test{
-    align-items: center;
+.button{
+    border: solid 1px;
+  background-color: #b6b6b6;
+  padding: 14px 28px;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
 }
+.top_text{
+    text-align: center;
+    padding: .5em;
+    margin: .3em;
+    font-family: cursive;
+    font-size:xx-large;  
+  }
