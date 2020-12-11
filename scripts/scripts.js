@@ -7,8 +7,19 @@ WorldRacer2020 = {
   level: document.getElementById("level_select_button"),
   sound: document.getElementById("sound_button"),
   music: document.getElementById("music_button"),
-  car: document, //either div or element,
-  track: document.getElementsByClassName("track"),
+
+
+  car: {
+    //distance algorithims, car image, div element
+  },
+
+  track: {
+  //collision algo ... 
+  },
+
+  timer: {
+    checkFinish();
+  },
 
 
   init: function () {
@@ -16,32 +27,35 @@ WorldRacer2020 = {
     collision();
   },
 
+//begins car movement and timer
   startRace: function () {
+    moveCar();
     startTimer();
   },
 
+  //checks to see if # of laps has been compleated
   finishRace: function () {
     stopTimer();
   },
 
   startTimer: function () {
-
   },
 
   stopTimer: function () {
-
   },
 
   renderCar: function () {
-
   },
 
   moveCar: function () {
-
   },
 
+  //if car hits track - maybe be relpaced with distance
   collision: function () {
+  },
 
+  checkFinish: function() {
+    //for the timer, once finish is compleated - timer stops
   },
 
 }
