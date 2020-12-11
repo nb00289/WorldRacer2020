@@ -1,17 +1,24 @@
 .button{
-    border: solid 1px;
-  background-color: #b6b6b6;
-  padding: 14px 28px;
-  font-weight: bold;
-  font-family: cursive;
-  font-size: 16px;
-  cursor: pointer;
-  display: inline-block;
-}
+    background-color: rgb(204, 204, 204);
+    color: black;
+    border: 2px solid #000000;
+    padding: 15px 32px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+  }
 .top_text{
     text-align: center;
+    color: #ff0000;
     padding: .5em;
     margin: .3em;
-    font-family: cursive;
-    font-size:xx-large;  
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40pt;  
   }
