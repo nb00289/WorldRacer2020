@@ -35,7 +35,8 @@ WorldRacer2020 = {
   },
 
   menuClick: function() {
-    this.menu.onclick = this//.open menu
+    this.menu.onclick = x //function() { 
+      //document.location = “link”}
   },
 
 //begins car movement and timer -- moves to new page which moves car and timer
