@@ -1,12 +1,12 @@
 WorldRacer2020 = {
 
   // All names and id's are changeable, just the outline to get everything in code
-  menu: document.getElementById("menu_button"),
-  start: document.getElementById("start_button"),
-  settings: document.getElementById("difficulty_button"),
-  level: document.getElementById("level_select_button"),
-  sound: document.getElementById("sound_button"),
-  music: document.getElementById("music_button"),
+  menu: document.getElementById("menuBtn"),
+  startGame: document.getElementById("startBtn"),
+  settings: document.getElementById("difficultyBtn"),
+  level: document.getElementById("levelSelectBtn"),
+  sound: document.getElementById("soundBtn"),
+  music: document.getElementById("musicBtn"),
 
 
   car: {
@@ -18,13 +18,25 @@ WorldRacer2020 = {
   },
 
   timer: {
-    checkFinish();
+    time: 0,
+    isRunning: false,
+    start: function() {
+      let x = y
+    }
+  },
+
+  countdown: {
+    // when track is loaded in, timer visable on screen counds down from # (10?)
   },
 
 
   init: function () {
     startRace();
     collision();
+  },
+
+  menuClick: function() {
+    this.menu.onclick = this//.open menu
   },
 
 //begins car movement and timer
@@ -39,9 +51,18 @@ WorldRacer2020 = {
   },
 
   startTimer: function () {
+    if(this.countdown == 0) {
+      this.timer.start();
+      this.timer.isRunning == true;
+    }
   },
 
   stopTimer: function () {
+    //when car passes finishline x times, timer stops
+    // has check finish function inside it
+    if(x.times.happens){
+      this.timer.isRunning == false;
+    }
   },
 
   renderCar: function () {
@@ -53,11 +74,6 @@ WorldRacer2020 = {
   //if car hits track - maybe be relpaced with distance
   collision: function () {
   },
-
-  checkFinish: function() {
-    //for the timer, once finish is compleated - timer stops
-  },
-
 }
 
 WorldRacer2020.init();
