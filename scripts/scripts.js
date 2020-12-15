@@ -2,9 +2,8 @@ WorldRacer2020 = {
 
   // All names and id's are changeable, just the outline to get everything in code
   menu: document.getElementById("menuBtn"),
-  startGame: document.getElementById("startBtn"),
-  settings: document.getElementById("difficultyBtn"),
-  level: document.getElementById("levelSelectBtn"),
+  startRacing: document.getElementById("startBtn"),
+  difficulty: document.getElementById("difficultyBtn"),
   sound: document.getElementById("soundBtn"),
   music: document.getElementById("musicBtn"),
 
@@ -39,10 +38,9 @@ WorldRacer2020 = {
     this.menu.onclick = this//.open menu
   },
 
-//begins car movement and timer
+//begins car movement and timer -- moves to new page which moves car and timer
   startRace: function () {
-    moveCar();
-    startTimer();
+    this.startRacing.onclick = some_Function(); //to open new page or however we do it
   },
 
   //checks to see if # of laps has been compleated
