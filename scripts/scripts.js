@@ -1,9 +1,9 @@
 WorldRacer2020 = {
 
   // All names and id's are changeable, just the outline to get everything in code
-  menu: document.getElementById("menuBtn"),
-  startRacing: document.getElementById("startBtn"),
-  difficulty: document.getElementById("difficultyBtn"),
+  //menu: document.getElementById("menuBtn"),
+  //startRacing: document.getElementById("startBtn"),
+  //difficulty: document.getElementById("difficultyBtn"),
   sound: document.getElementById("soundBtn"),
   music: document.getElementById("musicBtn"),
 
@@ -34,9 +34,17 @@ WorldRacer2020 = {
     collision();
   },
 
+  createCar: function(){
+    let cardiv = document.createElement("div");
+    cardiv.className = "car";
+    this.container.append(cardiv);
+    let car = {
+      
+    }
+  },
+
   menuClick: function() {
-    this.menu.onclick = x //function() { 
-      //document.location = “link”}
+    t//moving to HTML in <a href= "" <a>
   },
 
 //begins car movement and timer -- moves to new page which moves car and timer
