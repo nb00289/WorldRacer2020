@@ -8,21 +8,54 @@ WorldRacer2020 = {
   music: document.getElementById("musicBtn"),
 
 
-  car: {
-    //distance algorithims, car image, div element
-  },
+  car: null,
 
-  track: {
-  //collision algo ... 
-  },
+  track: [
+    {
+      pavement: "black",
+      wall: "red", 
+    }
+  ],
 
   timer: {
+    //This was taken off of :
+    //https://joe-riggs.com/blog/2012/05/javascript-count-up-timer-with-hours-minutes-second-hours-minutes/
+    //It said it required jquery, but this is way to "count up"
     time: 0,
     isRunning: false,
     start: function() {
-      let x = y
-    }
+      var time_shown = $("#realtime").text();
+      var time_chunks = time_shown.split(":");
+      var hour, mins, secs;
+
+      hour = Number(time_chunks[0]);
+      mins = Number(time_chunks[1]);
+      secs = Number(time_chunks[2]);
+      secs++;
+      if (secs == 60) {
+        secs = 0;
+        mins = mins + 1;
+      }
+      if (mins == 60) {
+        mins = 0;
+        hour = hour + 1;
+      }
+      if (hour == 13) {
+        hour = 1;
+      }
+
+      $("#realtime").text(hour + ":" + plz(mins) + ":" + plz(secs));
+
+    }, plz: function(digit){
+ 
+      var zpad = digit + '';
+      if (digit < 10) {
+          zpad = "0" + zpad;
+      }
+      return zpad;
+  }
   },
+  //Need to make it understandable and change it to work for JS
 
   countdown: {
     // when track is loaded in, timer visable on screen counds down from # (10?)
@@ -39,12 +72,12 @@ WorldRacer2020 = {
     cardiv.className = "car";
     this.container.append(cardiv);
     let car = {
-      
+      immage: "",
+      x_pos: x,
+      y_pos: y,
+      element: cardiv,
     }
-  },
-
-  menuClick: function() {
-    t//moving to HTML in <a href= "" <a>
+    return car
   },
 
 //begins car movement and timer -- moves to new page which moves car and timer
