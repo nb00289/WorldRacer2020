@@ -1,19 +1,30 @@
 .home_button{
-    background-color: rgb(204, 204, 204);
+  -webkit-appearance: none; 
+    background-color: rgb(218, 218, 218);
     color: black;
     border: 2px solid #000000;
     padding: 15px 32px;
     text-align: center;
     font-weight: bold;
-    text-decoration: none;
-    display: flex;
     font-size: 22px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 4px 2px;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
   }
+
+  .home_button:hover {
+    opacity: 1;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+
 .top_text{
     text-align: center;
     color: #ff0000;
