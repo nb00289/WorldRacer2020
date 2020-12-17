@@ -7,15 +7,9 @@ WorldRacer2020 = {
   sound: document.getElementById("soundBtn"),
   music: document.getElementById("musicBtn"),
 
-
   car: null,
-
-  track: [
-    {
-      pavement: "black",
-      wall: "red", 
-    }
-  ],
+  raceTrack: [],
+  wall: [],
 
   timer: {
     //This was taken off of :
@@ -63,8 +57,7 @@ WorldRacer2020 = {
 
 
   init: function () {
-    startRace();
-    collision();
+    renderTrack();
   },
 
   createCar: function(){
@@ -78,6 +71,26 @@ WorldRacer2020 = {
       element: cardiv,
     }
     return car
+  },
+
+  renderTrack: function () {
+    let track_container = document.getElementById("grid")
+    
+    let raceTrackArray = [
+      [0,0,0],[0,1,2],[1,0,0],[1,1,1],
+      []
+    ];      
+    
+    if (raceTrack[i][2] == 2) { 
+    let track = document.createElement("div");
+    track.className = "track";
+    track_container.appendChild(track);
+    raceTrack.push(raceTrackArray);
+  }
+  let wall = {
+    color: "red"
+  }
+  return wall;
   },
 
 //begins car movement and timer -- moves to new page which moves car and timer
