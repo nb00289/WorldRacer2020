@@ -77,15 +77,20 @@ WorldRacer2020 = {
     let track_container = document.getElementById("grid")
     
     let raceTrackArray = [
-      [0,0,0],[0,1,2],[1,0,0],[1,1,1],
+      [0,0,2],[0,1,2],[1,0,2],[1,1,2],
       []
     ];      
-    
+
+    for (i = 0; i < raceTrackArray.length; i++){
+      //if (raceTrackArray[i][2] == 0){
+
+      //}
     if (raceTrack[i][2] == 2) { 
     let track = document.createElement("div");
     track.className = "track";
     track_container.appendChild(track);
-    raceTrack.push(raceTrackArray);
+    //raceTrack.push(raceTrackArray);
+    }
   }
   let wall = {
     color: "red"
