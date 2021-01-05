@@ -163,14 +163,31 @@ WorldRacer2020 = {
   createCar: function () {
     let cardiv = document.createElement("div");
     cardiv.className = "car";
-    this.container.append(cardiv);
+    this.track_container.append(cardiv);
     let car = {
       immage: "",
       x_pos: x,
       y_pos: y,
+      x_velocity: 3,
+      y_velocity: 3,
       element: cardiv,
     }
-    return car
+    return car;
+  },
+
+  renderCar: function () {
+    for (let i = 0; i < this.people.length; i++) {
+      this.people[i].element.style.top = this.people[i].y_pos + "px";
+      this.people[i].element.style.left = this.people[i].x_pos + "px";
+      this.people[i].element.style.backgroundColor = this.people[i].color;
+    }
+  },
+
+  moveCar: function () {
+  },
+
+  //if car hits track - maybe be relpaced with distance
+  collision: function () {
   },
 
   renderTrack: function () {
@@ -227,16 +244,6 @@ WorldRacer2020 = {
     if (x.times.happens) {
       this.timer.isRunning == false;
     }
-  },
-
-  renderCar: function () {
-  },
-
-  moveCar: function () {
-  },
-
-  //if car hits track - maybe be relpaced with distance
-  collision: function () {
   },
 }
 

@@ -67,6 +67,13 @@
   background-color: darkgrey;
 }
 
+.car {
+  height: 20px;
+  width: 20px;
+  background-color: yellow;
+  margin: .5px;
+}
+
 .race_square {
   height: 20px;
   width: 20px;
