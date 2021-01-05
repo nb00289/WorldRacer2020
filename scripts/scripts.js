@@ -9,7 +9,7 @@ WorldRacer2020 = {
 
   car: null,
   wall: [],
-  raceTrackArray: [
+  raceTrackArray1: [
     [0, 0, 2], [0, 1, 2], [0, 2, 2], [0, 3, 2], [0, 4, 2], [0, 5, 2], [0, 6, 2], [0, 7, 2], [0, 8, 2], [0, 9, 2], [0, 10, 2],
     [0, 11, 2], [0, 12, 2], [0, 13, 2], [0, 14, 2], [0, 15, 2], [0, 16, 2], [0, 17, 2], [0, 18, 2], [0, 19, 2], [0, 20, 2],
     [0, 21, 2], [0, 22, 2], [0, 23, 2], [0, 24, 2], [0, 25, 2], [0, 26, 2], [0, 27, 2], [0, 28, 2], [0, 29, 2], [0, 30, 2],
@@ -177,36 +177,36 @@ WorldRacer2020 = {
     // 0 = race track, 1 = wall, 2 = grass
     //for (i = 0; i < this.raceTrackArray; i++){}
     let track_container = document.getElementById("grid")
-    for (i = 0; i < this.raceTrackArray.length; i++) {
-      if (this.raceTrackArray[i][2] === 0) {
+    for (i = 0; i < this.raceTrackArray1.length; i++) {
+      if (this.raceTrackArray1[i][2] === 0) {
         let raceSquare = document.createElement("div")
         raceSquare.className = "race_square";
         track_container.appendChild(raceSquare);
       }
-      if (this.raceTrackArray[i][2] === 1) {
+      if (this.raceTrackArray1[i][2] === 1) {
         let wallSquare = document.createElement("div")
         wallSquare.className = "wall_square";
         track_container.appendChild(wallSquare);
       }
-      if (this.raceTrackArray[i][2] === 2) {
+      if (this.raceTrackArray1[i][2] === 2) {
         let grassSquare = document.createElement("div")
         grassSquare.className = "grass_square";
         track_container.appendChild(grassSquare);
       }
-      if (this.raceTrackArray[i][2] === 3) {
+      if (this.raceTrackArray1[i][2] === 3) {
         let finishSquare = document.createElement("div")
         finishSquare.className = "finish_square";
         track_container.appendChild(finishSquare)
       }
     }
-    this.raceSquare = track_container.children;
-    this.wallSquare = track_container.children;
-    this.grassSquare = track_container.children;
+    //this.raceSquare = track_container.children;
+    //this.wallSquare = track_container.children;
+    //this.grassSquare = track_container.children;
   },
 
   //begins car movement and timer -- moves to new page which moves car and timer
   startRace: function () {
-    this.startRacing.onclick = some_Function(); //to open new page or however we do it
+    this.startRacing.onclick = some_Function(); 
   },
 
   //checks to see if # of laps has been compleated
