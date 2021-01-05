@@ -162,6 +162,11 @@ WorldRacer2020 = {
     // when track is loaded in, timer visable on screen counds down from # (10?)
   },
 
+
+  init: function () {
+    renderTrack();
+  },
+
   createCar: function () {
     let cardiv = document.createElement("div");
     cardiv.className = "car";
