@@ -8,8 +8,18 @@ WorldRacer2020 = {
   music: document.getElementById("musicBtn"),
 
   car: null,
-  raceTrack: [],
   wall: [],
+  raceTrackArray : [
+    [0, 0, 1], [0, 1, 2], [0, 2, 0], [0, 3, 1], [0, 4, 2], [0, 5, 0], [0, 6, 1], [0, 7, 1], [0, 8, 0], [0, 9, 0], [0, 10, 0],
+    [0, 11, 0], [0, 12, 0], [0, 13, 0], [0, 14, 0], [0, 15, 0], [0, 16, 0], [0, 17, 0], [0, 18, 0], [0, 19, 0], [0, 20, 0],
+    [0, 21, 0], [0, 22, 0], [0, 23, 0], [0, 24, 0], [0, 25, 0], [0, 26, 0], [0, 27, 0], [0, 28, 0], [0, 29, 0], [0, 30, 0],
+    [0, 31, 0], [0, 32, 0], [0, 33, 0], [0, 34, 0], [0, 35, 0], [0, 36, 0], [0, 37, 0], [0, 38, 0], [0, 39, 0], [0, 40, 0],
+    []
+  ],
+
+  init: function () {
+    WorldRacer2020.renderTrack();
+  },
 
   timer: {
     //This was taken off of :
@@ -55,11 +65,6 @@ WorldRacer2020 = {
     // when track is loaded in, timer visable on screen counds down from # (10?)
   },
 
-
-  init: function () {
-    renderTrack();
-  },
-
   createCar: function () {
     let cardiv = document.createElement("div");
     cardiv.className = "car";
@@ -74,38 +79,29 @@ WorldRacer2020 = {
   },
 
   renderTrack: function () {
+    // 0 = race track, 1 = wall, 2 = grass
+    //for (i = 0; i < this.raceTrackArray; i++){}
     let track_container = document.getElementById("grid")
-
-    let raceTrackArray = [
-      [0, 0, 0], [0, 1, 0], [0, 2, 0], [0, 3, 0], [0, 4, 0], [0, 5, 0], [0, 6, 0], [0, 7, 0], [0, 8, 0], [0, 9, 0], [0, 10, 0],
-      [0, 11, 0], [0, 12, 0], [0, 13, 0], [0, 14, 0], [0, 15, 0], [0, 16, 0], [0, 17, 0], [0, 18, 0], [0, 19, 0], [0, 20, 0],
-      [0, 21, 0], [0, 22, 0], [0, 23, 0], [0, 24, 0], [0, 25, 0], [0, 26, 0], [0, 27, 0], [0, 28, 0], [0, 29, 0], [0, 30, 0],
-      [0, 31, 0], [0, 32, 0], [0, 33, 0], [0, 34, 0], [0, 35, 0], [0, 36, 0], [0, 37, 0], [0, 38, 0], [0, 39, 0], [0, 40, 0],
-      []
-    ];
-
-    for (i = 0; i > raceTrackArray.length; i++) {
-      //raceTrackArray[i][0] = x 
-      //raceTrackArray[i][1] = y 
-    }
-
-    for (i = 0; i < raceTrackArray.length; i++) {
-      //if (raceTrackArray[i][2] == 0){
-      //let grass = document.createElement("div");
-      //grass.className = "grass";
-      //track_container.appendChild(grass);
-      //}
-      if (raceTrack[i][2] == 2) {
-        let track = document.createElement("div");
-        track.className = "track";
-        track_container.appendChild(track);
-        //raceTrack.push(raceTrackArray);
+    for (i = 0; i < this.raceTrackArray.length; i++) {
+      if (this.raceTrackArray[i][2] === 0) {
+        let raceSquare = document.createElement("div")
+        raceSquare.className = "race_square";
+        track_container.appendChild(raceSquare);
+      }
+      if (this.raceTrackArray[i][2] === 1) {
+        let wallSquare = document.createElement("div")
+        wallSquare.className = "wall_square";
+        track_container.appendChild(wallSquare);
+      }
+      if (this.raceTrackArray[i][2] === 2) {
+        let grassSquare = document.createElement("div")
+        grassSquare.className = "grass_square";
+        track_container.appendChild(grassSquare);
       }
     }
-    let wall = {
-      color: "red"
-    }
-    return wall;
+    this.raceSquare = track_container.children;
+    this.wallSquare = track_container.children;
+    this.grassSquare = track_container.children;
   },
 
   //begins car movement and timer -- moves to new page which moves car and timer
