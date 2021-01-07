@@ -7,6 +7,29 @@ WorldRacer2020 = {
   //sound: document.getElementById("soundBtn"),
   //music: document.getElementById("musicBtn"),
 
+  //menuToRace : function(){
+    //let x = document.getElementById("race_div");
+    //let y = document.getElementById("home_div");
+  //if (x.style.display === "none" && y.style.display === "block") {
+    //x.style.display = "block";
+    //y.style.display = "none";
+  //} else {
+    //x.style.display = "none";
+    //y.style.display = "block";
+  //}
+  //},
+  //raceToMenu : function(){
+    //let x = document.getElementById("home_div");
+    //let y = document.getElementById("race_div");
+  //if (x.style.display === "none") {
+    //x.style.display = "block";
+    //y.style.display = "none";
+  //} else {
+   // x.style.display = "none";
+    //y.style.display = "block";
+  //}
+//},
+
   carArray: [],
   track_container: document.getElementById("grid"),
   raceTrackArray1: [

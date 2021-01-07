@@ -2,6 +2,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="/scripts/scripts.js"></script> 
   <title>World Racer 2020</title>
   <style>
     body {
@@ -11,15 +12,124 @@
       background-size: cover;
     }
     </style>
+  <script>
+    function menuToRace() {
+      let x = document.getElementById("race_div");
+      let y = document.getElementById("home_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function menuToTrack() {
+      let x = document.getElementById("track_div");
+      let y = document.getElementById("home_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function menuToDiff() {
+      let x = document.getElementById("diff_div");
+      let y = document.getElementById("home_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function raceToxMenu() {
+      let x = document.getElementById("home_div");
+      let y = document.getElementById("race_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function raceToDiff() {
+      let x = document.getElementById("diff_div");
+      let y = document.getElementById("race_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function raceToCar() {
+      let x = document.getElementById("car_div");
+      let y = document.getElementById("race_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function raceToTrack() {
+      let x = document.getElementById("track_div");
+      let y = document.getElementById("race_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+  </script>
 </head>
-</style>
 
 <body>
-  <h1 class="top_text">AP Comp Sci World Racer 2020</h1>
-  <div id=home_menu>
-   <button id = "startBtn" class="home_button">Start Racing!</button>
-  <button class = "home_button">Choose Your Track</button>
-  <button id = "difficultyBtn" class="home_button">Difficulty Settings</button>
+  <div id="home_div">
+    <!-- menu in this div --->
+    <h1 class="top_text">AP Comp Sci World Racer 2020</h1>
+    <div id=home_menu>
+      <button onclick="menuToRace();" class="home_button">Start Racing!</button>
+      <button class="home_button">Difficulty Settings</button>
+    </div>
+  </div>
+
+  <div id="race_div">
+    <!-- Racing happens in this div --->
+    <h1 class="minitop_text">AP Comp Sci World Racer 2020</h1>
+    <div id="WorldRacer2020">
+      <div id="left_child">
+        <div id="racing_container">
+          <div id="grid">
+            <div id="car"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right_child">
+        <button class="race_button">Play / Pause</button>
+        <button class="race_button">Reset Game</button>
+        <button class="race_button">Track Select</button>
+        <button class="race_button">Race Car Select</button>
+        <button class="race_button">Difficulty Select</button>
+        <button onclick="raceToMenu();" class="race_button">Return to Menu</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
