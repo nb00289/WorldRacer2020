@@ -6,8 +6,25 @@
   display: none;
 }
 
+#car_div{
+  display: none;
+}
+
+#track_div{
+  display: none;
+}
+ 
+#diff_div{
+  display: none;
+}
+
 .home_button{
-  -webkit-appearance: none; 
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+    -webkit-appearance: none; 
     background-color: rgb(218, 218, 218);
     color: black;
     border: 2px solid #000000;
@@ -16,45 +33,219 @@
     font-weight: bold;
     font-size: 22px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 4px 2px;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
     opacity: 0.6; 
     -webkit-transition: .2s; 
     transition: opacity .2s;
     transition: background .2s;
   }
 
-  .home_button:hover {
+.home_button:hover {
     opacity: 1;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
   }
-  .race_button{
+.race_button{
     -webkit-appearance: none; 
-    justify-content: center;
-      background-color: rgb(218, 218, 218);
-      color: black;
-      border: 2px solid #000000;
-      text-align: center;
-      font-weight: bold;
-      font-size: 25px;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      padding: .3em;
-      cursor: pointer;
-      opacity: 0.6; 
-      -webkit-transition: .2s; 
-      transition: opacity .2s;
-      transition: background .2s;
-    }
+    background-color: rgb(218, 218, 218);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
   
-    .race_button:hover {
-      opacity: 1;
-      background-color: #ffffff;
-      color: rgb(0, 0, 0);
-    }
+.race_button:hover {
+    opacity: 1;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+.car_button{
+    -webkit-appearance: none; 
+    background-color: rgba(156, 156, 156, 0.664);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;        padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
+    
+.car_button:hover {
+    opacity: 1;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+.Rcar_button{
+    -webkit-appearance: none; 
+    background-color: rgb(202, 29, 29);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;        padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
+    
+.Rcar_button:hover {
+    opacity: 1;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+  }
+
+.Ocar_button{
+    -webkit-appearance: none; 
+    background-color: rgb(202, 113, 29);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
+      
+.Ocar_button:hover {
+    opacity: 1;
+    background-color: #e75f04e7;
+    color: rgb(0, 0, 0);
+  }
+
+.Ycar_button{
+    -webkit-appearance: none; 
+    background-color: rgb(206, 192, 0);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
+      
+.Ycar_button:hover {
+    opacity: 1;
+    background-color: #ffe602;
+    color: rgb(0, 0, 0);
+  }
+
+.Gcar_button{
+    -webkit-appearance: none; 
+    background-color: rgba(12, 121, 2, 0.685);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
+      
+.Gcar_button:hover {
+    opacity: 1;
+    background-color: #236911;
+    color: rgb(0, 0, 0);
+  }
+
+.Bcar_button{
+    -webkit-appearance: none; 
+    background-color: rgba(11, 45, 199, 0.705);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
+      
+.Bcar_button:hover {
+    opacity: 1;
+    background-color: #171acc;
+    color: rgb(0, 0, 0);
+  }
+
+.Pcar_button{
+    -webkit-appearance: none; 
+    background-color: rgba(62, 4, 88, 0.685);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
+      
+.Pcar_button:hover {
+    opacity: 1;
+    background-color: #501577;
+    color: rgb(0, 0, 0);
+  }
+
+.track_button{
+    -webkit-appearance: none; 
+    background-color: rgba(1, 114, 16, 0.664);
+    color: black;
+    border: 2px solid #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;        padding: .3em;
+    cursor: pointer;
+    opacity: 0.6; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    transition: background .2s;
+  }
+    
+.track_button:hover {
+    opacity: 1;
+    background-color: #079707;
+    color: rgb(0, 0, 0);
+  }
 
 .top_text{
     text-align: center;
@@ -74,31 +265,42 @@
     text-decoration: underline;
 }
 .minitop_text{
-  text-align: center;
-  color: #ff0000;
-  background-color: slategray;
-  padding: .1em;
-  margin: .3em;
-  border: 2px solid #000000;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 30pt;  
-  text-shadow:
-  -3px -3px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 0 #000;  
-  text-decoration: underline;
+    text-align: center;
+    color: #ff0000;
+    background-color: slategray;
+    padding: .1em;
+    margin: .1em;
+    border: 2px solid #000000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30pt;  
+    text-shadow:
+    -3px -3px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+    text-decoration: underline;
+  }
+
+.title_text{
+    text-align: center;
+    color: #000000;
+    background-color: rgb(201, 201, 201);
+    margin-bottom: .1em;
+    margin-top: 0em;
+    border: 2px solid #000000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25pt;  
 }
+
 #right_child{
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
+    display: flex;
+    flex-direction: column;
 }
 #left_child{
-  float: left;
-  width: 80%;
-  height: 100%;
-}
+    float: left;
+    width: 80%;
+    height: 100%;
+  }
 
 #racing_container {
   width: 100%;
@@ -117,6 +319,51 @@
   background-color: rgb(255, 255, 255);
 }
 
+#car_select{
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  height: 90%;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+#car_display{
+  width: 70%;
+  height: 60%;
+  margin-top: .2em;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(211, 211, 211);
+}
+
+#car_nxt_pge{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 7%;
+  margin-top: .2em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#car_buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  height: 25%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: .3em;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(211, 211, 211);
+}
 
 #grid {
   display: flex;
