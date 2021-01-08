@@ -13,20 +13,8 @@
     }
     </style>
   <script>
-    function menuToRace() {
-      let x = document.getElementById("race_div");
-      let y = document.getElementById("home_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function menuToTrack() {
-      let x = document.getElementById("track_div");
+    function menuToCar() {
+      let x = document.getElementById("car_div");
       let y = document.getElementById("home_div");
       if (x.style.display === "none" && y.style.display === "block") {
         x.style.display = "block";
@@ -38,8 +26,20 @@
     }
 
     function menuToDiff() {
-      let x = document.getElementById("diff_div");
-      let y = document.getElementById("home_div");
+          let x = document.getElementById("diff_div");
+          let y = document.getElementById("home_div");
+          if (x.style.display === "none" && y.style.display === "block") {
+            x.style.display = "block";
+            y.style.display = "none";
+          } else {
+            x.style.display = "none";
+            y.style.display = "block";
+          }
+        }
+
+    function carToMenu() {
+      let x = document.getElementById("home_div");
+      let y = document.getElementById("car_div");
       if (x.style.display === "none" && y.style.display === "block") {
         x.style.display = "block";
         y.style.display = "none";
@@ -49,7 +49,55 @@
       }
     }
 
-    function raceToxMenu() {
+    function carToTrack() {
+      let x = document.getElementById("track_div");
+      let y = document.getElementById("car_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function trackToMenu() {
+      let x = document.getElementById("home_div");
+      let y = document.getElementById("track_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function trackToCar() {
+      let x = document.getElementById("car_div");
+      let y = document.getElementById("track_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function trackToRace() {
+      let x = document.getElementById("race_div");
+      let y = document.getElementById("track_div");
+      if (x.style.display === "none" && y.style.display === "block") {
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+
+    function raceToMenu() {
       let x = document.getElementById("home_div");
       let y = document.getElementById("race_div");
       if (x.style.display === "none" && y.style.display === "block") {
@@ -105,8 +153,59 @@
     <!-- menu in this div --->
     <h1 class="top_text">AP Comp Sci World Racer 2020</h1>
     <div id=home_menu>
-      <button onclick="menuToRace();" class="home_button">Start Racing!</button>
+      <button onclick="menuToCar();" class="home_button">Start Racing!</button>
       <button class="home_button">Difficulty Settings</button>
+    </div>
+  </div>
+
+  <div id="car_div">
+    <h1 class="minitop_text">AP Comp Sci World Racer 2020</h1>
+    <div id="car_select">
+      <h1 class="title_text">Select Your Race Car</h1>
+      <div id="car_display">
+        <!--Insert the pictures of the cars here.
+        As you hover over the buttons, the cars will
+        display within this container-->
+      </div>
+      <div id="car_nxt_pge">
+        <button onclick="carToMenu();" class="car_button">Return to Menu</button>
+        <button onclick="carToTrack();" class="car_button">Select Race Track</button>
+      </div>
+      <div id="car_buttons">
+        <!--here are the buttons for selecting the
+      different car colors-->
+      <button class="Rcar_button">Red Race Car</button>
+      <button class="Ocar_button">Orange Race Car</button>
+      <button class="Ycar_button">Yellow Race Car</button>
+      <button class="Gcar_button">Green Race Car</button>
+      <button class="Bcar_button">Blue Race Car</button>
+      <button class="Pcar_button">Purple Race Car</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="track_div">
+    <h1 class="minitop_text">AP Comp Sci World Racer 2020</h1>
+    <div id="car_select">
+      <h1 class="title_text">Select Your Race Track</h1>
+      <div id="car_display">
+        <!--Insert the pictures of the tracks here.
+        As you hover over the buttons, the tracks will
+        display within this container-->
+      </div>
+      <div id="car_nxt_pge">
+        <button onclick="trackToMenu();" class="car_button">Return to Menu</button>
+        <button onclick="trackToCar();" class="car_button">Return to Car Selection</button>
+        <button onclick="trackToRace();" class="car_button">Start Racing!</button>
+      </div>
+      <div id="car_buttons">
+        <!--here are the buttons for selecting the
+      different car colors-->
+      <button class="track_button">Oval Race Track</button>
+      <button class="track_button">Easy Race Track</button>
+      <button class="track_button">Medium Race Track</button>
+      <button class="track_button">Hard Race Track</button>
+      </div>
     </div>
   </div>
 
