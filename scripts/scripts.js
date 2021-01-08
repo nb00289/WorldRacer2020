@@ -140,15 +140,6 @@ WorldRacer2020 = {
     [0, 21, 2], [0, 22, 2], [0, 23, 2], [0, 24, 2], [0, 25, 2], [0, 26, 2], [0, 27, 2], [0, 28, 2], [0, 29, 2], [0, 30, 2],
     [0, 31, 2], [0, 32, 2], [0, 33, 2], [0, 34, 2], [0, 35, 2], [0, 36, 2], [0, 37, 2],
   ],
-  init: function () {
-    WorldRacer2020.renderTrack();
-  },
-
-  init: function () {
-    WorldRacer2020.renderTrack();
-    //WorldRacer2020.createCar();
-    //WorldRacer2020.renderCar();
-  },
 
   timer: {
   },
