@@ -36,6 +36,17 @@
             y.style.display = "block";
           }
         }
+        function diffToMenu() {
+          let x = document.getElementById("home_div");
+          let y = document.getElementById("diff_div");
+          if (x.style.display === "none" && y.style.display === "block") {
+            x.style.display = "block";
+            y.style.display = "none";
+          } else {
+            x.style.display = "none";
+            y.style.display = "block";
+          }
+        }
 
     function carToMenu() {
       let x = document.getElementById("home_div");
@@ -174,6 +185,7 @@
       faster your lap times will be. Default speed is 3.
     </h3>
     <input type="range" min="1" max="10" value="3" class="slider" id="car_speed_range">
+    <button onclick="diffToMenu();" class="home_button">Return to Menu</button>
   </div>
 </div>
 
