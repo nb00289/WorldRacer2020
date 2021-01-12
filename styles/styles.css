@@ -1,5 +1,5 @@
 #home_div{
-  display: block;
+  display: none;
 }
 
 #race_div{
@@ -15,7 +15,7 @@
 }
  
 #diff_div{
-  display: none;
+  display: block;
 }
 
 .home_button{
@@ -363,6 +363,82 @@
   border: 1px solid rgb(255, 0, 0);
   border-radius: 10px;
   background-color: rgb(211, 211, 211);
+}
+
+#diff_select{
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  height: 90%;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+#slider_title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  height: 10%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0%;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 5px;
+  background-color: rgb(211, 211, 211);
+  font-size: 20pt;
+}
+#subslider_title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+  height: fit-content;
+  margin-top: 0%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: .1em;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 5px;
+  background-color: rgb(211, 211, 211);
+}
+
+.slider{
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 50%; 
+  height: 15px; 
+  background: #d3d3d3; 
+  outline: none; 
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7; 
+  -webkit-transition: .2s; 
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%; 
+  background: #0a17ca;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000000;
+  cursor: pointer;
+}
+
+.slider:hover {
+  opacity: 1; 
 }
 
 #grid {

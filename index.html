@@ -154,9 +154,28 @@
     <h1 class="top_text">AP Comp Sci World Racer 2020</h1>
     <div id=home_menu>
       <button onclick="menuToCar();" class="home_button">Start Racing!</button>
-      <button class="home_button">Difficulty Settings</button>
+      <button onclick="menuToDiff();"  class="home_button">Difficulty Settings</button>
     </div>
   </div>
+
+<div id="diff_div">
+  <h1 class="minitop_text">AP Comp Sci World Racer 2020</h1>
+  <div id="diff_select">
+    <h1 class="title_text">Select Difficulty Settings</h1>
+    <h2 id="slider_title">Select the size of your race car</h2>
+    <h3 id="subslider_title">Larger cars will have a harder time 
+      traversing the narrow track while smaller cars can 
+      easily avoid the walls. The default is medium.
+    </h3>
+    <input type="range" min="1" max="10" value="5" class="slider" id="car_size_range">
+    <h2 id="slider_title">Select the speed of your race car</h2>
+    <h3 id="subslider_title">Faster cars will require the player to have faster
+      and more accurate control of the car. However, the faster your car is, the 
+      faster your lap times will be. Default speed is 3.
+    </h3>
+    <input type="range" min="1" max="10" value="3" class="slider" id="car_speed_range">
+  </div>
+</div>
 
   <div id="car_div">
     <h1 class="minitop_text">AP Comp Sci World Racer 2020</h1>
