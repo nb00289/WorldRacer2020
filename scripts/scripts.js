@@ -431,9 +431,10 @@ medTrack: [
     return car;
   },
 
-  renderCar: function () {
-    this.car.element.style.top = this.car.y_pos + "px";
-    this.car.element.style.left = this.car.x_pos + "px";
+  renderCarOval: function () {
+    for(i = 0; i < WorldRacer2020.ovalTrack; i++){
+      console.log(car.x_pos = "", car.y_pos = "")
+    }
   },
 
   moveCar: function () {
