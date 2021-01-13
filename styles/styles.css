@@ -442,10 +442,20 @@
 .slider:hover {
   opacity: 1; 
 }
-
-#grid {
-/* Easy grid is for both oval and easy track */
-}
+/*
+#grid { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 3;
+  width: Xpx; 
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin: auto;
+  padding: 10px;
+  background-color: darkgrey;
+ // Easy grid is for both oval and easy track 
+}*/
 #easyGrid {
   display: flex;
   flex-wrap: wrap;
