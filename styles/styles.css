@@ -1,5 +1,5 @@
 #home_div{
-  display: block;
+  display: none;
 }
 
 #race_div{
@@ -11,10 +11,26 @@
 }
 
 #track_div{
-  display: none;
+  display: block;
 }
  
 #diff_div{
+  display: none;
+}
+
+#oval_track{
+  display: none;
+}
+
+#easy_track{
+  display: none;
+}
+
+#medium_track{
+  display: none;
+}
+
+#hard_track{
   display: none;
 }
 
@@ -88,6 +104,7 @@
     background-color: #ffffff;
     color: rgb(0, 0, 0);
   }
+
 .Rcar_button{
     -webkit-appearance: none; 
     background-color: rgb(202, 29, 29);
@@ -354,6 +371,20 @@
 }
 
 #car_buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  height: 25%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: .3em;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(211, 211, 211);
+}
+
+#track_buttons{
   display: flex;
   flex-direction: row;
   justify-content: center;
