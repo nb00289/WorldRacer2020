@@ -397,7 +397,7 @@ WorldRacer2020 = {
       y: 0,
       x_velocity: 5,
       y_velocity: 5,
-      color: WorldRacerSelect.carSelect.carChoice,
+      //color: WorldRacerSelect.carSelect.carChoice,
     };
 
 
@@ -429,7 +429,7 @@ WorldRacer2020 = {
             tile.className = "tile";
             if (this.easyTrack[i][j] === 2) {
                 tile.classList.add("grass");
-            } else if (this.hardTrack[i][j] === 0) {
+            } else if (this.easyTrack[i][j] === 0) {
                 tile.classList.add("track");
             } else if (this.easyTrack[i][j] === 1){
                 tile.classList.add("wall")
@@ -452,7 +452,7 @@ WorldRacer2020 = {
       y_velocity: 3,
       element: cardiv,
       //tag for changing color of car
-      // // color : WorldRacerSelect.carSelect.carChoice,
+      //color : WorldRacerSelect.carSelect.carChoice,
     }
     return car;
   },
