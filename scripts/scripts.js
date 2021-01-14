@@ -1,5 +1,6 @@
 WorldRacerSelect = {
-  screenChange : function(){
+
+  screenChange: function () {
     let a = document.getElementById('home_div')
     let b = document.getElementById('diff_div')
     let c = document.getElementById('car_div')
@@ -51,7 +52,7 @@ WorldRacerSelect = {
       a.style.display = "block";
     }
   },
-  carSelect : function () {
+  carSelect: function () {
     var carChoice = "black";
     if (document.getElementById('rCar').clicked == true) {
       carChoice == "red";
@@ -73,21 +74,22 @@ WorldRacerSelect = {
     }
   },
 
-  trackSelect : function () {
+  trackSelect: function () {
     var trackChoice = none;
     if (document.getElementById('ovaltrack').clicked == true) {
-      carChoice == ovalTrack;
+      trackChoice == ovalTrack;
     }
     if (document.getElementById('easytrack').clicked == true) {
-      carChoice == easyTrack;
+      trackChoice == easyTrack;
     }
     if (document.getElementById('mediumtrack').clicked == true) {
-      carChoice == mediumTrack;
+      trackChoice == mediumTrack;
     }
     if (document.getElementById('hardTrack').clicked == true) {
-      carChoice == hardTrack;
+      trackChoice == hardTrack;
     }
   },
+
 }
 WorldRacerSelect.init(),
 
