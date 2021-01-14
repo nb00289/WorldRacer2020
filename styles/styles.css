@@ -512,6 +512,12 @@
   padding: 10px;
   background-color: darkgrey;
 }
+
+#Grid {
+  width: 800px;
+  position: relative;
+}
+
 /* All cars the same, just different colors,
 or maybe just change color atribute for the selected car..? */
 .car {
