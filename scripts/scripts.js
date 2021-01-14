@@ -402,13 +402,13 @@ WorldRacer2020 = {
 
 
     window.onkeydown = function (event) {
-      if (event.keyCode == 83) {
+      if (event.keyCode == 83|| event.keyCode == 40) {
         car.y = car.y + 21;
-      } else if (event.keyCode == 87) {
+      } else if (event.keyCode == 87 || event.keyCode == 38) {
         car.y = car.y - 21;
-      } else if (event.keyCode == 68) {
+      } else if (event.keyCode == 68 || event.keyCode == 39) {
         car.x = car.x + 21;
-      } else if (event.keyCode == 65) {
+      } else if (event.keyCode == 65 || event.keyCode == 37) {
         car.x = car.x - 21;
       }
 
@@ -421,22 +421,22 @@ WorldRacer2020 = {
   renderTrack: function () {
     // 0 = race track, 1 = wall, 2 = grass
     //Track is interchangeable
-    for (i = 0; i < this.hardTrack.length; i++) {
+    for (i = 0; i < this.easyTrack.length; i++) {
         for (j = 0; j < 38; j++) {
             let tile = document.createElement("div");
             tile.style.top = i * 21 + "px";
             tile.style.left = j * 21+ "px";
             tile.className = "tile";
-            if (this.hardTrack[i][j] === 2) {
+            if (this.easyTrack[i][j] === 2) {
                 tile.classList.add("grass");
             } else if (this.hardTrack[i][j] === 0) {
                 tile.classList.add("track");
-            } else if (this.hardTrack[i][j] === 1){
+            } else if (this.easyTrack[i][j] === 1){
                 tile.classList.add("wall")
-            } else if (this.hardTrack[i][j] ===3){
+            } else if (this.easyTrack[i][j] ===3){
                 tile.classList.add("finish");
             }
-            TestRacer.track_container.append(tile);
+            WorldRacer2020.track_container.append(tile)
         }
     }
 },
@@ -452,7 +452,7 @@ WorldRacer2020 = {
       y_velocity: 3,
       element: cardiv,
       //tag for changing color of car
-      color : WorldRacerSelect.carSelect.carChoice,
+      // // color : WorldRacerSelect.carSelect.carChoice,
     }
     return car;
   },
