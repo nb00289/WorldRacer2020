@@ -486,7 +486,7 @@
   padding: 10px;
   background-color: darkgrey;
  // Easy grid is for both oval and easy track 
-}*/
+}
 #easyGrid {
   display: flex;
   flex-wrap: wrap;
@@ -499,7 +499,7 @@
   padding: 10px;
   background-color: darkgrey;
 }
-/* for medium and hard tracks */
+/* for medium and hard tracks 
 #hardGrid {
   display: flex;
   flex-wrap: wrap;
@@ -511,9 +511,15 @@
   margin: auto;
   padding: 10px;
   background-color: darkgrey;
+}*/
+
+#Grid {
+  width: 800px;
+  position: relative;
 }
+
 /* All cars the same, just different colors,
-or maybe just change color atribute for the selected car..? */
+or maybe just change color atribute for the selected car..? 
 .car {
   height: 10px;
   width: 10px;
@@ -552,4 +558,37 @@ or maybe just change color atribute for the selected car..? */
   width: 20px;
   background-color: whitesmoke;
   margin: .5px;
+} */
+
+.tile {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 0;
+}
+
+.grass {
+  background-color: green;
+}
+
+.track {
+  background-color: black;
+}
+
+.wall {
+  background-color: red;
+}
+
+.finish {
+  background-color: white;
+}
+
+#car {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: skyblue;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
 }
