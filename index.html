@@ -3,7 +3,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="scripts/scripts.js"></script>
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="/scripts/scripts.js"></script>
   <title>World Racer 2020</title>
   <style>
     body {
@@ -13,220 +12,14 @@
       background-size: cover;
     }
   </style>
-  <script>
-    function menuToCar() {
-      let x = document.getElementById("car_div");
-      let y = document.getElementById("home_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function menuToDiff() {
-      let x = document.getElementById("diff_div");
-      let y = document.getElementById("home_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-    function diffToMenu() {
-      let x = document.getElementById("home_div");
-      let y = document.getElementById("diff_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function carToMenu() {
-      let x = document.getElementById("home_div");
-      let y = document.getElementById("car_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function carToTrack() {
-      let x = document.getElementById("track_div");
-      let y = document.getElementById("car_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function trackToMenu() {
-      let x = document.getElementById("home_div");
-      let y = document.getElementById("track_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function trackToCar() {
-      let x = document.getElementById("car_div");
-      let y = document.getElementById("track_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function trackToRace() {
-      let x = document.getElementById("race_div");
-      let y = document.getElementById("track_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function raceToMenu() {
-      let x = document.getElementById("home_div");
-      let y = document.getElementById("race_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function raceToDiff() {
-      let x = document.getElementById("diff_div");
-      let y = document.getElementById("race_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function raceToCar() {
-      let x = document.getElementById("car_div");
-      let y = document.getElementById("race_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function raceToTrack() {
-      let x = document.getElementById("track_div");
-      let y = document.getElementById("race_div");
-      if (x.style.display === "none" && y.style.display === "block") {
-        x.style.display = "block";
-        y.style.display = "none";
-      } else {
-        x.style.display = "none";
-        y.style.display = "block";
-      }
-    }
-
-    function ovalTrack() {
-      let a = document.getElementById("oval_track");
-      let b = document.getElementById("easy_track");
-      let c = document.getElementById("medium_track");
-      let d = document.getElementById("hard_track");
-      if (a.style.display === "none") {
-        a.style.display = "block";
-        b.style.display = "none";
-        c.style.display = "none";
-        d.style.display = "none";
-      } else {
-        a.style.display = "block";
-      }
-    }
-
-    function easyTrack() {
-      let a = document.getElementById("oval_track");
-      let b = document.getElementById("easy_track");
-      let c = document.getElementById("medium_track");
-      let d = document.getElementById("hard_track");
-      if (b.style.display === "none") {
-        b.style.display = "block";
-        a.style.display = "none";
-        c.style.display = "none";
-        d.style.display = "none";
-      } else {
-        b.style.display = "block";
-      }
-    }
-
-    function mediumTrack() {
-      let a = document.getElementById("oval_track");
-      let b = document.getElementById("easy_track");
-      let c = document.getElementById("medium_track");
-      let d = document.getElementById("hard_track");
-      if (c.style.display === "none") {
-        c.style.display = "block";
-        b.style.display = "none";
-        a.style.display = "none";
-        d.style.display = "none";
-      } else {
-        c.style.display = "block";
-      }
-    }
-
-    function hardTrack() {
-      let a = document.getElementById("oval_track");
-      let b = document.getElementById("easy_track");
-      let c = document.getElementById("medium_track");
-      let d = document.getElementById("hard_track");
-      if (d.style.display === "none") {
-        d.style.display = "block";
-        b.style.display = "none";
-        c.style.display = "none";
-        a.style.display = "none";
-      } else {
-        d.style.display = "block";
-      }
-    }
-
-  </script>
 </head>
-
 <body>
   <div id="home_div">
     <!-- menu in this div --->
     <h1 class="top_text">AP Comp Sci World Racer 2020</h1>
     <div id=home_menu>
-      <button onclick="menuToCar();" class="home_button">Start Racing!</button>
-      <button onclick="menuToDiff();" class="home_button">Difficulty Settings</button>
+      <button id="homeToCar" class="home_button">Start Racing!</button>
+      <button id="homeToDiff" class="home_button">Difficulty Settings</button>
     </div>
   </div>
 
@@ -246,7 +39,7 @@
         faster your lap times will be. Default speed is 3.
       </h3>
       <input type="range" min="1" max="10" value="3" class="slider" id="car_speed_range">
-      <button onclick="diffToMenu();" class="home_button">Return to Menu</button>
+      <button id="diffToHome" class="home_button">Return to Menu</button>
     </div>
   </div>
 
@@ -260,20 +53,20 @@
         display within this container-->
       </div>
       <div id="car_nxt_pge">
-        <button onclick="carToMenu();" class="car_button">Return to Menu</button>
-        <button onclick="carToTrack();" class="car_button">Select Race Track</button>
+        <button id="carToHome" class="car_button">Return to Menu</button>
+        <button id="carToTrack" class="car_button">Select Race Track</button>
       </div>
       <div id="car_buttons">
         <!--here are the buttons for selecting the
       different car colors-->
-        <button class="Rcar_button">Red Race Car</button>
-        <button class="Ocar_button">Orange Race Car</button>
-        <button class="Ycar_button">Yellow Race Car</button>
-        <button class="Gcar_button">Green Race Car</button>
-        <button class="Bcar_button">Blue Race Car</button>
-        <button class="Pcar_button">Purple Race Car</button>
+        <button id="rcar" class="Rcar_button">Red Race Car</button>
+        <button id="ocar" class="Ocar_button">Orange Race Car</button>
+        <button id="ycar" class="Ycar_button">Yellow Race Car</button>
+        <button id="gcar" class="Gcar_button">Green Race Car</button>
+        <button id="bcar" class="Bcar_button">Blue Race Car</button>
+        <button id="pcar" class="Pcar_button">Purple Race Car</button>
       </div>
-    </div>
+    </div> 
   </div>
 
   <div id="track_div">
@@ -286,17 +79,17 @@
         display within this container-->
       </div>
       <div id="car_nxt_pge">
-        <button onclick="trackToMenu();" class="car_button">Return to Menu</button>
-        <button onclick="trackToCar();" class="car_button">Return to Car Selection</button>
-        <button onclick="trackToRace();" class="car_button">Start Racing!</button>
+        <button id="trackToMenu" class="car_button">Return to Menu</button>
+        <button id="trackToCar" class="car_button">Return to Car Selection</button>
+        <button id="trackToRace" class="car_button">Start Racing!</button>
       </div>
       <div id="track_buttons">
         <!--here are the buttons for selecting the
       different track-->
-        <button onlick="ovalTrack();" class="track_button">Oval Race Track</button>
-        <button onlick="easyTrack();" class="track_button">Easy Race Track</button>
-        <button onlick="mediumTrack();" class="track_button">Medium Race Track</button>
-        <button onlick="hardTrack();" class="track_button">Hard Race Track</button>
+        <button id="ovalTrack" class="track_button">Oval Race Track</button>
+        <button id="easyTrack" class="track_button">Easy Race Track</button>
+        <button id="mediumTrack" class="track_button">Medium Race Track</button>
+        <button id="hardTrack" class="track_button">Hard Race Track</button>
       </div>
     </div>
   </div>
@@ -328,10 +121,10 @@
       <div id="right_child">
         <button class="race_button">Play / Pause</button>
         <button class="race_button">Reset Game</button>
-        <button onclick="raceToTrack();" class="race_button">Track Select</button>
-        <button onclick="raceToCar();" class="race_button">Race Car Select</button>
-        <button onclick="raceToDiff();" class="race_button">Difficulty Select</button>
-        <button onclick="raceToMenu();" class="race_button">Return to Menu</button>
+        <button id="raceToTrack" class="race_button">Track Select</button>
+        <button id="raceToCar" class="race_button">Race Car Select</button>
+        <button id="raceToDiff" class="race_button">Difficulty Select</button>
+        <button id="raceToHome" class="race_button">Return to Menu</button>
       </div>
     </div>
 </body>
