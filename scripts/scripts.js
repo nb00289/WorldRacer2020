@@ -387,9 +387,56 @@ WorldRacer2020 = {
   init: function () {
     //changed to specific track, can esaily be changed back
     //WorldRacer2020.renderTrack();
-    WorldRacer2020.createCar();
-    WorldRacer2020.renderCar();
-  },
+    WorldRacer2020.renderTrack();
+    let car = {
+      elem: document.getElementById("car"),
+      x: 0,
+      y: 0,
+      x_velocity: 5,
+      y_velocity: 5,
+      color: WorldRacerSelect.carSelect.carChoice,
+    };
+
+
+    window.onkeydown = function (event) {
+      if (event.keyCode == 83) {
+        car.y = car.y + 21;
+      } else if (event.keyCode == 87) {
+        car.y = car.y - 21;
+      } else if (event.keyCode == 68) {
+        car.x = car.x + 21;
+      } else if (event.keyCode == 65) {
+        car.x = car.x - 21;
+      }
+
+      car.elem.style.top = car.y + "px";
+      car.elem.style.left = car.x + "px";
+    }
+
+  }, 
+
+  renderTrack: function () {
+    // 0 = race track, 1 = wall, 2 = grass
+    //Track is interchangeable
+    for (i = 0; i < this.hardTrack.length; i++) {
+        for (j = 0; j < 38; j++) {
+            let tile = document.createElement("div");
+            tile.style.top = i * 21 + "px";
+            tile.style.left = j * 21+ "px";
+            tile.className = "tile";
+            if (this.hardTrack[i][j] === 2) {
+                tile.classList.add("grass");
+            } else if (this.hardTrack[i][j] === 0) {
+                tile.classList.add("track");
+            } else if (this.hardTrack[i][j] === 1){
+                tile.classList.add("wall")
+            } else if (this.hardTrack[i][j] ===3){
+                tile.classList.add("finish");
+            }
+            TestRacer.track_container.append(tile);
+        }
+    }
+},
 
   createCar: function () {
     let cardiv = document.createElement("div");
@@ -405,12 +452,6 @@ WorldRacer2020 = {
       color = WorldRacerSelect.carSelect.carChoice,
     }
     return car;
-  },
-
-  renderCarOval: function () {
-    for(i = 0; i < WorldRacer2020.ovalTrack; i++){
-      console.log(car.x_pos = "", car.y_pos = "")
-    }
   },
 
   moveCar: function () {
