@@ -1,10 +1,10 @@
 WorldRacerSelect = {
-  screenChange = function () {
-    let a = document.getElementById(home_div)
-    let b = document.getElementById(diff_div)
-    let c = document.getElementById(car_div)
-    let d = document.getElementById(track_div)
-    let e = document.getElementById(race_div)
+  screenChange : function(){
+    let a = document.getElementById('home_div')
+    let b = document.getElementById('diff_div')
+    let c = document.getElementById('car_div')
+    let d = document.getElementById('track_div')
+    let e = document.getElementById('race_div')
     if (document.getElementById('homeToCar').clicked == true) {
       a.style.display = "none";
       c.style.display = "block";
@@ -12,6 +12,7 @@ WorldRacerSelect = {
     if (document.getElementById('homeToDiff').clicked == true) {
       a.style.display = "none";
       b.style.display = "block";
+      console.log("home to diff")
     }
     if (document.getElementById('carToHome').clicked == true) {
       c.style.display = "none";
@@ -50,7 +51,7 @@ WorldRacerSelect = {
       a.style.display = "block";
     }
   },
-  carSelect = function () {
+  carSelect : function () {
     var carChoice = "black";
     if (document.getElementById('rCar').clicked == true) {
       carChoice == "red";
@@ -72,7 +73,7 @@ WorldRacerSelect = {
     }
   },
 
-  trackSelect = function () {
+  trackSelect : function () {
     var trackChoice = none;
     if (document.getElementById('ovaltrack').clicked == true) {
       carChoice == ovalTrack;
@@ -488,7 +489,7 @@ medTrack: [
       y_velocity: 3,
       element: cardiv,
       //tag for changing color of car
-      color = WorldRacerSelect.carSelect.carChoice,
+      color : WorldRacerSelect.carSelect.carChoice,
     }
     return car;
   },
