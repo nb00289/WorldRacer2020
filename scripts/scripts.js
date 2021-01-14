@@ -76,16 +76,16 @@ WorldRacerSelect = {
   trackSelect : function () {
     var trackChoice = none;
     if (document.getElementById('ovaltrack').clicked == true) {
-      carChoice == ovalTrack;
+      trackChoice == ovalTrack;
     }
     if (document.getElementById('easytrack').clicked == true) {
-      carChoice == easyTrack;
+      trackChoice == easyTrack;
     }
     if (document.getElementById('mediumtrack').clicked == true) {
-      carChoice == mediumTrack;
+      trackChoice == mediumTrack;
     }
     if (document.getElementById('hardTrack').clicked == true) {
-      carChoice == hardTrack;
+      trackChoice == hardTrack;
     }
   },
 }
