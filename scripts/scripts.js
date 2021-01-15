@@ -320,19 +320,15 @@ WorldRacer2020 = {
       x_velocity: 5,
       y_velocity: 5,
       racing: true,
-    }
-      while (this.car.racing === true) {
-        this.car.x_pos = this.car.x_pos + this.car.x_velocity;
-        this.car.y_pos = this.car.y_pos + this.car.y_velocity;
       //color: WorldRacerSelect.carSelect.carChoice,
     };
 
-   // moveCar = function () {
-     // while (this.car.racing === true) {
-       // this.car.x_pos = this.car.x_pos + this.car.x_velocity;
-       // this.car.y_pos = this.car.y_pos + this.car.y_velocity;
-     // }
-    //},
+   moveCar = function () {
+      while (this.car.racing === true) {
+        this.car.x_pos = this.car.x_pos + this.car.x_velocity;
+        this.car.y_pos = this.car.y_pos + this.car.y_velocity;
+      }
+    },
 
 
     window.onkeydown = function (event) {
@@ -379,9 +375,12 @@ WorldRacer2020 = {
 
   //if car hits track - maybe be relpaced with distance
   collision: function () {
-    //for (i = 0; i < this.carArray; i++){
-      //for (i = 0; i < this.raceTrackArray1; i++){
-        //if (this.car){
+    for(i = 0; i < easyTrack.length; i++){
+      for(j = 0; j< 38; j++){
+        if (this.easyTrack[i][j] == 1){
+        }
+      }
+    }
   },
 //notes 
  // 0 = race track, 1 = wall, 2 = grass
