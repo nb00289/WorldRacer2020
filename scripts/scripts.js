@@ -1,96 +1,3 @@
-WorldRacerSelect = {
-  screenChange : function(){
-    let a = document.getElementById('home_div')
-    let b = document.getElementById('diff_div')
-    let c = document.getElementById('car_div')
-    let d = document.getElementById('track_div')
-    let e = document.getElementById('race_div')
-    if (document.getElementById('homeToCar').clicked == true) {
-      a.style.display = "none";
-      c.style.display = "block";
-    }
-    if (document.getElementById('homeToDiff').clicked == true) {
-      a.style.display = "none";
-      b.style.display = "block";
-      console.log("home to diff")
-    }
-    if (document.getElementById('carToHome').clicked == true) {
-      c.style.display = "none";
-      a.style.display = "block";
-    }
-    if (document.getElementById('carToTrack').clicked == true) {
-      c.style.display = "none";
-      d.style.display = "block";
-    }
-    if (document.getElementById('trackToHome').clicked == true) {
-      d.style.display = "none";
-      a.style.display = "block";
-    }
-    if (document.getElementById('trackToCar').clicked == true) {
-      d.style.display = "none";
-      c.style.display = "block";
-    }
-    if (document.getElementById('trackToRace').clicked == true) {
-      d.style.display = "none";
-      e.style.display = "block";
-    }
-    if (document.getElementById('raceToTrack').clicked == true) {
-      e.style.display = "none";
-      d.style.display = "block";
-    }
-    if (document.getElementById('raceToCar').clicked == true) {
-      e.style.display = "none";
-      c.style.display = "block";
-    }
-    if (document.getElementById('raceToDiff').clicked == true) {
-      e.style.display = "none";
-      b.style.display = "block";
-    }
-    if (document.getElementById('raceToHome').clicked == true) {
-      e.style.display = "none";
-      a.style.display = "block";
-    }
-  },
-  carSelect : function () {
-    var carChoice = "black";
-    if (document.getElementById('rCar').clicked == true) {
-      carChoice == "red";
-    }
-    if (document.getElementById('oCar').clicked == true) {
-      carChoice == "orange";
-    }
-    if (document.getElementById('yCar').clicked == true) {
-      carChoice == "yellow";
-    }
-    if (document.getElementById('gCar').clicked == true) {
-      carChoice == "green";
-    }
-    if (document.getElementById('bCar').clicked == true) {
-      carChoice == "blue";
-    }
-    if (document.getElementById('pCar').clicked == true) {
-      carChoice == "purple";
-    }
-  },
-
-  trackSelect : function () {
-    var trackChoice = none;
-    if (document.getElementById('ovaltrack').clicked == true) {
-      trackChoice == ovalTrack;
-    }
-    if (document.getElementById('easytrack').clicked == true) {
-      trackChoice == easyTrack;
-    }
-    if (document.getElementById('mediumtrack').clicked == true) {
-      trackChoice == mediumTrack;
-    }
-    if (document.getElementById('hardTrack').clicked == true) {
-      trackChoice == hardTrack;
-    }
-  },
-}
-WorldRacerSelect.init(),
-
 WorldRacer2020 = {
   track_container: document.getElementById("Grid"),
   //hard_track_container: document. getElementById("hardGrid"),
@@ -384,6 +291,99 @@ WorldRacer2020 = {
     // when track is loaded in, timer visable on screen counds down from # (10?)
   },
 
+  screenChange : function () {
+    console.log("its running")
+    let a = document.getElementById('home_div')
+    let b = document.getElementById('diff_div')
+    let c = document.getElementById('car_div')
+    let d = document.getElementById('track_div')
+    let e = document.getElementById('race_div')
+
+    if (document.getElementById("homeToCar").clicked == true) {
+      a.style.display = 'none';
+      c.style.display = 'block';
+      console.log("trying to change")
+    }else if (document.getElementById('homeToDiff').clicked == true) {
+      a.style.display = 'none';
+      b.style.display = 'block';
+      console.log("home to diff")
+    }else if (document.getElementById('carToHome').clicked == true) {
+      c.style.display = "none";
+      a.style.display = "block";
+    }else if (document.getElementById('carToTrack').clicked == true) {
+      c.style.display = "none";
+      d.style.display = "block";
+    }else if (document.getElementById('trackToHome').clicked == true) {
+      d.style.display = "none";
+      a.style.display = "block";
+    }else if (document.getElementById('trackToCar').clicked == true) {
+      d.style.display = "none";
+      c.style.display = "block";
+    }else if (document.getElementById('trackToRace').clicked == true) {
+      d.style.display = "none";
+      e.style.display = "block";
+    }else if (document.getElementById('raceToTrack').clicked == true) {
+      e.style.display = "none";
+      d.style.display = "block";
+    }else if (document.getElementById('raceToCar').clicked == true) {
+      e.style.display = "none";
+      c.style.display = "block";
+    }else if (document.getElementById('raceToDiff').clicked == true) {
+      e.style.display = "none";
+      b.style.display = "block";
+    }else if (document.getElementById('raceToHome').clicked == true) {
+      e.style.display = "none";
+      a.style.display = "block";
+    }else{}
+  },
+    carSelect : function () {
+      var carChoice = "black";
+      if (document.getElementById('rCar').clicked == true) {
+        carChoice == "red";
+      }
+      if (document.getElementById('oCar').clicked == true) {
+        carChoice == "orange";
+      }
+      if (document.getElementById('yCar').clicked == true) {
+        carChoice == "yellow";
+      }
+      if (document.getElementById('gCar').clicked == true) {
+        carChoice == "green";
+      }
+      if (document.getElementById('bCar').clicked == true) {
+        carChoice == "blue";
+      }
+      if (document.getElementById('pCar').clicked == true) {
+        carChoice == "purple";
+      }
+    },
+
+    trackSelect : function () {
+      var trackChoice = none;
+      if (document.getElementById('ovaltrack').clicked == true) {
+        trackChoice == ovalTrack;
+      }
+      if (document.getElementById('easytrack').clicked == true) {
+        trackChoce == easyTrack;
+      }
+      if (document.getElementById('mediumtrack').clicked == true) {
+        trackChoice == mediumTrack;
+      }
+      if (document.getElementById('hardTrack').clicked == true) {
+        trackChoice == hardTrack;
+      }
+    },
+    
+    laptimer : function(){
+      var sec = 30;
+      var timer = setInterval(function(){
+          document.getElementById('safeTimerDisplay').innerHTML='00:'+sec;
+          sec--;
+          if (sec < 0) {
+              clearInterval(timer);
+          }
+      }, 1000);
+  },
 
   init: function () {
     //changed to specific track, can esaily be changed back
@@ -397,7 +397,6 @@ WorldRacer2020 = {
       y_velocity: 5,
       color: WorldRacerSelect.carSelect.carChoice,
     };
-
 
     window.onkeydown = function (event) {
       if (event.keyCode == 83) {
@@ -434,7 +433,7 @@ WorldRacer2020 = {
             } else if (this.hardTrack[i][j] ===3){
                 tile.classList.add("finish");
             }
-            TestRacer.track_container.append(tile);
+            //WorldRacer2020.track_container.append(tile);
         }
     }
 },
