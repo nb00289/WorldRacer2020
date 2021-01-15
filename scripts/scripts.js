@@ -353,24 +353,57 @@ WorldRacer2020 = {
     // 0 = race track, 1 = wall, 2 = grass
     //Track is interchangeable
     for (i = 0; i < this.easyTrack.length; i++) {
-        for (j = 0; j < 38; j++) {
-            let tile = document.createElement("div");
-            tile.style.top = i * 21 + "px";
-            tile.style.left = j * 21+ "px";
-            tile.className = "tile";
-            if (this.easyTrack[i][j] === 2) {
-                tile.classList.add("grass");
-            } else if (this.easyTrack[i][j] === 0) {
-                tile.classList.add("track");
-            } else if (this.easyTrack[i][j] === 1){
-                tile.classList.add("wall")
-            } else if (this.easyTrack[i][j] ===3){
-                tile.classList.add("finish");
-            }
-            WorldRacer2020.track_container.append(tile)
+      for (j = 0; j < 38; j++) {
+        let tile = document.createElement("div");
+        tile.style.top = i * 21 + "px";
+        tile.style.left = j * 21 + "px";
+        tile.className = "tile";
+        //when clicked
+        if (document.getElementById('ovaltrack').clicked == true) {
+          if (this.ovalTrack[i][j] === 2) {
+            tile.classList.add("grass");
+          } else if (this.ovalTrack[i][j] === 0) {
+            tile.classList.add("track");
+          } else if (this.ovalTrack[i][j] === 1) {
+            tile.classList.add("wall")
+          } else if (this.ovalTrack[i][j] === 3) {
+            tile.classList.add("finish");
+          }
+        } if (document.getElementById('easytrack').clicked == true) {
+          if (this.easyTrack[i][j] === 2) {
+            tile.classList.add("grass");
+          } else if (this.easyTrack[i][j] === 0) {
+            tile.classList.add("track");
+          } else if (this.easyTrack[i][j] === 1) {
+            tile.classList.add("wall")
+          } else if (this.easyTrack[i][j] === 3) {
+            tile.classList.add("finish");
+          }
+        } if (document.getElementById('mediumtrack').clicked == true) {
+          if (this.medTrack[i][j] === 2) {
+            tile.classList.add("grass");
+          } else if (this.medTrack[i][j] === 0) {
+            tile.classList.add("track");
+          } else if (this.medTrack[i][j] === 1) {
+            tile.classList.add("wall")
+          } else if (this.medTrack[i][j] === 3) {
+            tile.classList.add("finish");
+          }
+        } else if (document.getElementById('hardTrack').clicked == true) {
+          if (this.hardTrack[i][j] === 2) {
+            tile.classList.add("grass");
+          } else if (this.hardTrack[i][j] === 0) {
+            tile.classList.add("track");
+          } else if (this.hardTrack[i][j] === 1) {
+            tile.classList.add("wall")
+          } else if (this.hardTrack[i][j] === 3) {
+            tile.classList.add("finish");
+          }
         }
+        WorldRacer2020.track_container.append(tile)
+      }
     }
-},
+  },
 
   //if car hits track - maybe be relpaced with distance
   collision: function () {
