@@ -1,9 +1,9 @@
 #home_div{
-  display: block;
+  display: none;
 }
 
 #race_div{
-  display: none;
+  display: block;
 }
 
 #car_div{
