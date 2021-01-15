@@ -319,16 +319,15 @@ WorldRacer2020 = {
       y: 0,
       x_velocity: 5,
       y_velocity: 5,
-      racing: true,
       //color: WorldRacerSelect.carSelect.carChoice,
-    };
-
-   moveCar = function () {
-      while (this.car.racing === true) {
-        this.car.x_pos = this.car.x_pos + this.car.x_velocity;
-        this.car.y_pos = this.car.y_pos + this.car.y_velocity;
-      }
-    },
+    }
+    
+   //moveCar = function () {
+     // while (car.racing === true) {
+       // car.x_pos = car.x_pos + car.x_velocity;
+       // car.y_pos = car.y_pos + car.y_velocity;
+     // }
+    //},
 
 
     window.onkeydown = function (event) {
@@ -346,7 +345,7 @@ WorldRacer2020 = {
       car.elem.style.left = car.x + "px";
     }
     
-    moveCar();
+    //moveCar();
 
   }, 
 
@@ -377,7 +376,7 @@ WorldRacer2020 = {
   collision: function () {
     for(i = 0; i < easyTrack.length; i++){
       for(j = 0; j< 38; j++){
-        if (this.easyTrack[i][j] == 1){
+        if (this.car){
         }
       }
     }
