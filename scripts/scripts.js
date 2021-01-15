@@ -51,43 +51,6 @@ WorldRacerSelect = {
         e.style.display = "none";
         a.style.display = "block";
       }
-    },
-    carSelect = function () {
-        var carChoice = "black";
-        if (document.getElementById('rCar').clicked == true) {
-          carChoice == "red";
-        }
-        if (document.getElementById('oCar').clicked == true) {
-          carChoice == "orange";
-        }
-        if (document.getElementById('yCar').clicked == true) {
-          carChoice == "yellow";
-        }
-        if (document.getElementById('gCar').clicked == true) {
-          carChoice == "green";
-        }
-        if (document.getElementById('bCar').clicked == true) {
-          carChoice == "blue";
-        }
-        if (document.getElementById('pCar').clicked == true) {
-          carChoice == "purple";
-        }
-    },
-
-    trackSelect = function () {
-        var trackChoice = none;
-        if (document.getElementById('ovaltrack').clicked == true) {
-          trackChoice == ovalTrack;
-        }
-        if (document.getElementById('easytrack').clicked == true) {
-          trackChoice == easyTrack;
-        }
-        if (document.getElementById('mediumtrack').clicked == true) {
-          trackChoice == mediumTrack;
-        }
-        if (document.getElementById('hardTrack').clicked == true) {
-          trackChoice == hardTrack;
-        }
     }
   }
 },
