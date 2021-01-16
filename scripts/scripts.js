@@ -407,24 +407,6 @@ WorldRacer2020 = {
   renderTrack: function () {
     // 0 = race track, 1 = wall, 2 = grass
     //Track is interchangeable
-<<<<<<< HEAD
-    for (i = 0; i < this.hardTrack.length; i++) {
-        for (j = 0; j < 38; j++) {
-            let tile = document.createElement("div");
-            tile.style.top = i * 21 + "px";
-            tile.style.left = j * 21+ "px";
-            tile.className = "tile";
-            if (this.hardTrack[i][j] === 2) {
-                tile.classList.add("grass");
-            } else if (this.hardTrack[i][j] === 0) {
-                tile.classList.add("track");
-            } else if (this.hardTrack[i][j] === 1){
-                tile.classList.add("wall")
-            } else if (this.hardTrack[i][j] ===3){
-                tile.classList.add("finish");
-            }
-            //WorldRacer2020.track_container.append(tile);
-=======
     for (i = 0; i < this.easyTrack.length; i++) {
       for (j = 0; j < 38; j++) {
         let tile = document.createElement("div");
@@ -472,7 +454,6 @@ WorldRacer2020 = {
           } else if (this.hardTrack[i][j] === 3) {
             tile.classList.add("finish");
           }
->>>>>>> effb52764fdfd17d5fad226fa7a60a028506d07e
         }
         WorldRacer2020.track_container.append(tile)
       }
