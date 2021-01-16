@@ -64,6 +64,7 @@ WorldRacer2020 = {
   ],
   
   laptimer : function(){
+    var countInterval = 1000;
     let seconds = 0;
     let minutes = 0;
     let dispTime = document.getElementById('timerDisplay');
@@ -78,7 +79,7 @@ WorldRacer2020 = {
       dispTime.innerHTML = minutes + ":" + seconds;
     //}
   }
-    var pace = setInterval(count, 1000);
+    var pace = setInterval(count, countInterval);
   },
 
   init: function () {
@@ -134,6 +135,12 @@ WorldRacer2020 = {
 
     //moveCar();
 
+  },
+  pausePlay: function(){
+    if(racing == true){
+      racing = false;
+      countInterval = null;
+    }
   },
 
   renderTrack: function () {
