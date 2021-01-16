@@ -2,7 +2,6 @@ WorldRacer2020 = {
   track_container: document.getElementById("Grid"),
   racing: true,
   timerCount: 1, 
-  //hard_track_container: document. getElementById("hardGrid"),
   easyTrack: [
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
 
@@ -70,7 +69,6 @@ WorldRacer2020 = {
     let dispTime = document.getElementById('timerDisplay');
 
     function count(){
-      //if(gameplay = true){
       seconds += WorldRacer2020.timerCount;
       if(seconds >= 60){
         seconds = 0;
@@ -83,9 +81,6 @@ WorldRacer2020 = {
   },
 
   init: function () {
-    //changed to specific track, can esaily be changed back
-    //WorldRacer2020.screenChange();
-    //WorldRacer2020.laptimer();
     WorldRacer2020.renderTrack();
     WorldRacer2020.racetimer();
     let car = {
@@ -94,15 +89,7 @@ WorldRacer2020 = {
       y: 525,
       x_velocity: 21,
       y_velocity: 21,
-      //color: WorldRacerSelect.carSelect.carChoice,
     };
-
-    //moveCar = function () {
-    // while (car.racing === true) {
-    // car.x_pos = car.x_pos + car.x_velocity;
-    // car.y_pos = car.y_pos + car.y_velocity;
-    // }
-    //},
 
     window.onkeydown = function (event) {
        if (WorldRacer2020.racing == true) {
@@ -119,8 +106,6 @@ WorldRacer2020 = {
           WorldRacer2020.reset();
         }
       }
-       // }
-      //}
       car.elem.style.top = car.y + "px";
       car.elem.style.left = car.x + "px";
       console.log(car.elem.style.top = car.y + "px",car.elem.style.left = car.x + "px");
@@ -140,7 +125,6 @@ WorldRacer2020 = {
     },
 
   renderTrack: function () {
-    // 0 = race track, 1 = wall, 2 = grass
     for (i = 0; i < this.easyTrack.length; i++) {
       for (j = 0; j < 38; j++) {
         let tile = document.createElement("div");
