@@ -225,25 +225,6 @@ WorldRacer2020 = {
     var pace = setInterval(count, 1000);
   },
 
-  lapButton: function () {
-    let seconds = 0;
-    let minutes = 0;
-    let dispTime = document.getElementById('lapDisplay');
-
-    function count() {
-      seconds += 1;
-      if (seconds >= 60) {
-        seconds = 0;
-        minutes = minutes + 1;
-      }
-    }
-    var pace = setInterval(count, 1000);
-
-    console.log("counting laps")
-    let laps = [];
-    laps.push = "Lap" + (laps.length + 1) + minutes + ":" + seconds;
-    dispLap.innerHTML = laps;
-  },
 
   init: function () {
     //changed to specific track, can esaily be changed back
