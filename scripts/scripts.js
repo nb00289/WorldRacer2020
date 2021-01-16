@@ -1,8 +1,7 @@
 WorldRacer2020 = {
   track_container: document.getElementById("Grid"),
   racing: true,
-  timerCount: 1, 
-  //hard_track_container: document. getElementById("hardGrid"),
+  timerCount: 1,
   easyTrack: [
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2],
