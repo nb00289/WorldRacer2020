@@ -207,47 +207,6 @@ WorldRacer2020 = {
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2],
   ],
 
-  homeToRace : function () {
-    document.getElementById('home_div').style.display = 'none';
-    document.getElementById('race_div').style.diplay = 'block';
-    },
-
-  homeToDiff : function () {
-    let a = document.getElementById('home_div').style.display();
-    let b = document.getElementById('diff_div').style.diplay();
-    if(a='block' && b =='none'){
-      b = 'block';
-      a = 'none';
-    }
-  },
-
-  diffToHome : function () {
-    let a = document.getElementById('diff_div').style.display
-    let b = document.getElementById('home_div').style.diplay
-    if(a='block' && b =='none'){
-      b = 'block'
-      a = 'none'
-    }
-  },
-
-  raceToDiff : function () {
-    let a = document.getElementById('race_div').style.display
-    let b = document.getElementById('diff_div').style.diplay
-    if(a='block' && b =='none'){
-      b = 'block'
-      a = 'none'
-    }
-  },
-
-  raceToHome : function () {
-    let a = document.getElementById('race_div').style.display
-    let b = document.getElementById('home_div').style.diplay
-    if(a='block' && b =='none'){
-      b = 'block'
-      a = 'none'
-    }
-  },
-
   laptimer : function(){
     console.log("creating vars")
     let seconds = 0;
