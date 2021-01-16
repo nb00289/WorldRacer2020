@@ -106,10 +106,9 @@ WorldRacer2020 = {
     window.onkeydown = function (event) {
       //for (i = 0; i < this.easyTrack; i++) {
       //for (j = 0; j < 38; j++) {
-      if (event.keyCode = 80) {
-        WorldRacer2020.pause();
-      }
-      if (racing == true) {
+      //if (event.keyCode = 80) {
+        //WorldRacer2020.pause();
+       if (WorldRacer2020.racing == true) {
         if (event.keyCode == 83 || event.keyCode == 40) {
           car.y = car.y + car.y_velocity;
         } else if (event.keyCode == 87 || event.keyCode == 38) {
@@ -121,7 +120,7 @@ WorldRacer2020 = {
         } else if (event.keyCode == 32 || event.keyCode == 74) {
           WorldRacer2020.lapButton();
         }
-      } else if (racing == false) {
+      } else if (WorldRacer2020.racing == false) {
       }
        // }
       //}
