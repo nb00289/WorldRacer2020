@@ -81,11 +81,7 @@ WorldRacer2020 = {
   }
     var pace = setInterval(count, 1000);
   },
-
-<<<<<<< HEAD
-
-=======
->>>>>>> f8f146a5c3b9bd74d8386fe7aed1a35f330d87d9
+  
   init: function () {
     //changed to specific track, can esaily be changed back
     //WorldRacer2020.screenChange();
