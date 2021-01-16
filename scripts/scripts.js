@@ -243,6 +243,51 @@ WorldRacer2020 = {
     let seconds = 00;
     let minutes = 00;
     let dispTime = document.getElementById('lapTimer');
+  screenChange : function () {
+    console.log("its running")
+    let a = document.getElementById('home_div')
+    let b = document.getElementById('diff_div')
+    let c = document.getElementById('car_div')
+    let d = document.getElementById('track_div')
+    let e = document.getElementById('race_div')
+
+    if (document.getElementById("homeToCar").clicked == true) {
+      a.style.display = 'none';
+      c.style.display = 'block';
+      console.log("trying to change")
+    }else if (document.getElementById('homeToDiff').clicked == true) {
+      a.style.display = 'none';
+      b.style.display = 'block';
+      console.log("home to diff")
+    }else if (document.getElementById('carToHome').clicked == true) {
+      c.style.display = "none";
+      a.style.display = "block";
+    }else if (document.getElementById('carToTrack').clicked == true) {
+      c.style.display = "none";
+      d.style.display = "block";
+    }else if (document.getElementById('trackToHome').clicked == true) {
+      d.style.display = "none";
+      a.style.display = "block";
+    }else if (document.getElementById('trackToCar').clicked == true) {
+      d.style.display = "none";
+      c.style.display = "block";
+    }else if (document.getElementById('trackToRace').clicked == true) {
+      d.style.display = "none";
+      e.style.display = "block";
+    }else if (document.getElementById('raceToTrack').clicked == true) {
+      e.style.display = "none";
+      d.style.display = "block";
+    }else if (document.getElementById('raceToCar').clicked == true) {
+      e.style.display = "none";
+      c.style.display = "block";
+    }else if (document.getElementById('raceToDiff').clicked == true) {
+      e.style.display = "none";
+      b.style.display = "block";
+    }else if (document.getElementById('raceToHome').clicked == true) {
+      e.style.display = "none";
+      a.style.display = "block";
+    }else{}
+  },
     
     function count(){
       //if(gameplay = true){
@@ -263,12 +308,13 @@ WorldRacer2020 = {
     //changed to specific track, can esaily be changed back
     //WorldRacer2020.renderTrack();
     WorldRacer2020.renderTrack();
+    //WorldRacer2020.laptimer();
     let car = {
       elem: document.getElementById("car"),
-      x: x,
-      y: y,
-      x_velocity: 5,
-      y_velocity: 5,
+      x: 210,
+      y: 504,
+      x_velocity: 21,
+      y_velocity: 21,
       //color: WorldRacerSelect.carSelect.carChoice,
     }
     
@@ -280,18 +326,28 @@ WorldRacer2020 = {
     //},
 
     window.onkeydown = function (event) {
-      if (event.keyCode == 83|| event.keyCode == 40) {
-        car.y = car.y + 21;
+      if (event.keyCode == 83 || event.keyCode == 40) {
+        car.y = car.y + car.y_velocity;
       } else if (event.keyCode == 87 || event.keyCode == 38) {
-        car.y = car.y - 21;
+        car.y = car.y - car.y_velocity;
       } else if (event.keyCode == 68 || event.keyCode == 39) {
-        car.x = car.x + 21;
+        car.x = car.x + car.x_velocity;
       } else if (event.keyCode == 65 || event.keyCode == 37) {
-        car.x = car.x - 21;
+        car.x = car.x - car.x_velocity;
       }
 
       car.elem.style.top = car.y + "px";
       car.elem.style.left = car.x + "px";
+    }
+
+    collision = function () {
+      for(i = 0; i < easyTrack.length; i++){
+        for(j = 0; j < 38; j++){
+          if (this.car.z_index == easyTrack[i][j].z_index){
+            console.log("Hit a wall");
+          }
+        }
+      }
     }
     
     //moveCar();
@@ -364,6 +420,15 @@ WorldRacer2020 = {
           } else if (this.hardTrack[i][j] === 3) {
             tile.classList.add("finish");
           }
+        if (this.easyTrack[i][j] === 2) {
+          tile.classList.add("grass");
+        } else if (this.easyTrack[i][j] === 0) {
+          tile.classList.add("track");
+        } else if (this.easyTrack[i][j] === 1) {
+          tile.classList.add("wall")
+        } else if (this.easyTrack[i][j] === 3) {
+          tile.classList.add("finish");
+
         }
         WorldRacer2020.track_container.append(tile)
       }
@@ -371,15 +436,7 @@ WorldRacer2020 = {
   },
 
   //if car hits track - maybe be relpaced with distance
-  collision: function () {
-    for(i = 0; i < easyTrack.length; i++){
-      for(j = 0; j< 38; j++){
-        if (this.car.z_index !== easyTrack[i][j].z_index){
-          console.log("Hit a wall");
-        }
-      }
-    }
-  },
+
 //notes 
  // 0 = race track, 1 = wall, 2 = grass
     //if (this.raceTrackArray1 == true){
@@ -413,3 +470,4 @@ WorldRacer2020 = {
 }
 
 WorldRacer2020.init();
+
