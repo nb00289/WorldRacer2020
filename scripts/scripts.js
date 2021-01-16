@@ -233,7 +233,7 @@ WorldRacer2020 = {
     //WorldRacer2020.screenChange();
     //WorldRacer2020.laptimer();
     WorldRacer2020.renderTrack();
-    //WorldRacer2020.laptimer();
+    WorldRacer2020.laptimer();
     let car = {
       elem: document.getElementById("car"),
       x: 189,
