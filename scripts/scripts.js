@@ -316,43 +316,6 @@ WorldRacer2020 = {
       a.style.display = "block";
     }else{}
   },
-    carSelect : function () {
-      var carChoice = "black";
-      if (document.getElementById('rCar').clicked == true) {
-        carChoice == "red";
-      }
-      if (document.getElementById('oCar').clicked == true) {
-        carChoice == "orange";
-      }
-      if (document.getElementById('yCar').clicked == true) {
-        carChoice == "yellow";
-      }
-      if (document.getElementById('gCar').clicked == true) {
-        carChoice == "green";
-      }
-      if (document.getElementById('bCar').clicked == true) {
-        carChoice == "blue";
-      }
-      if (document.getElementById('pCar').clicked == true) {
-        carChoice == "purple";
-      }
-    },
-
-    trackSelect : function () {
-      var trackChoice = none;
-      if (document.getElementById('ovaltrack').clicked == true) {
-        trackChoice == ovalTrack;
-      }
-      if (document.getElementById('easytrack').clicked == true) {
-        trackChoce == easyTrack;
-      }
-      if (document.getElementById('mediumtrack').clicked == true) {
-        trackChoice == mediumTrack;
-      }
-      if (document.getElementById('hardTrack').clicked == true) {
-        trackChoice == hardTrack;
-      }
-    },
     
     laptimer : function(){
       var sec = 30;
@@ -369,12 +332,13 @@ WorldRacer2020 = {
     //changed to specific track, can esaily be changed back
     //WorldRacer2020.renderTrack();
     WorldRacer2020.renderTrack();
+    //WorldRacer2020.laptimer();
     let car = {
       elem: document.getElementById("car"),
-      x: x,
-      y: y,
-      x_velocity: 5,
-      y_velocity: 5,
+      x: 210,
+      y: 504,
+      x_velocity: 21,
+      y_velocity: 21,
       //color: WorldRacerSelect.carSelect.carChoice,
     }
     
@@ -386,18 +350,28 @@ WorldRacer2020 = {
     //},
 
     window.onkeydown = function (event) {
-      if (event.keyCode == 83|| event.keyCode == 40) {
-        car.y = car.y + 21;
+      if (event.keyCode == 83 || event.keyCode == 40) {
+        car.y = car.y + car.y_velocity;
       } else if (event.keyCode == 87 || event.keyCode == 38) {
-        car.y = car.y - 21;
+        car.y = car.y - car.y_velocity;
       } else if (event.keyCode == 68 || event.keyCode == 39) {
-        car.x = car.x + 21;
+        car.x = car.x + car.x_velocity;
       } else if (event.keyCode == 65 || event.keyCode == 37) {
-        car.x = car.x - 21;
+        car.x = car.x - car.x_velocity;
       }
 
       car.elem.style.top = car.y + "px";
       car.elem.style.left = car.x + "px";
+    }
+
+    collision = function () {
+      for(i = 0; i < easyTrack.length; i++){
+        for(j = 0; j < 38; j++){
+          if (this.car.z_index == easyTrack[i][j].z_index){
+            console.log("Hit a wall");
+          }
+        }
+      }
     }
     
     //moveCar();
@@ -414,46 +388,15 @@ WorldRacer2020 = {
         tile.style.left = j * 21 + "px";
         tile.className = "tile";
         //when clicked
-        if (document.getElementById("ovaltrack").clicked == true) {
-          if (this.ovalTrack[i][j] === 2) {
-            tile.classList.add("grass");
-          } else if (this.ovalTrack[i][j] === 0) {
-            tile.classList.add("track");
-          } else if (this.ovalTrack[i][j] === 1) {
-            tile.classList.add("wall")
-          } else if (this.ovalTrack[i][j] === 3) {
-            tile.classList.add("finish");
-          }
-        } if (document.getElementById('easytrack').clicked == true) {
-          if (this.easyTrack[i][j] === 2) {
-            tile.classList.add("grass");
-          } else if (this.easyTrack[i][j] === 0) {
-            tile.classList.add("track");
-          } else if (this.easyTrack[i][j] === 1) {
-            tile.classList.add("wall")
-          } else if (this.easyTrack[i][j] === 3) {
-            tile.classList.add("finish");
-          }
-        } if (document.getElementById('mediumtrack').clicked == true) {
-          if (this.medTrack[i][j] === 2) {
-            tile.classList.add("grass");
-          } else if (this.medTrack[i][j] === 0) {
-            tile.classList.add("track");
-          } else if (this.medTrack[i][j] === 1) {
-            tile.classList.add("wall")
-          } else if (this.medTrack[i][j] === 3) {
-            tile.classList.add("finish");
-          }
-        } else if (document.getElementById('hardTrack').clicked == true) {
-          if (this.hardTrack[i][j] === 2) {
-            tile.classList.add("grass");
-          } else if (this.hardTrack[i][j] === 0) {
-            tile.classList.add("track");
-          } else if (this.hardTrack[i][j] === 1) {
-            tile.classList.add("wall")
-          } else if (this.hardTrack[i][j] === 3) {
-            tile.classList.add("finish");
-          }
+        if (this.easyTrack[i][j] === 2) {
+          tile.classList.add("grass");
+        } else if (this.easyTrack[i][j] === 0) {
+          tile.classList.add("track");
+        } else if (this.easyTrack[i][j] === 1) {
+          tile.classList.add("wall")
+        } else if (this.easyTrack[i][j] === 3) {
+          tile.classList.add("finish");
+
         }
         WorldRacer2020.track_container.append(tile)
       }
@@ -461,15 +404,7 @@ WorldRacer2020 = {
   },
 
   //if car hits track - maybe be relpaced with distance
-  collision: function () {
-    for(i = 0; i < easyTrack.length; i++){
-      for(j = 0; j< 38; j++){
-        if (this.car.z_index !== easyTrack[i][j].z_index){
-          console.log("Hit a wall");
-        }
-      }
-    }
-  },
+
 //notes 
  // 0 = race track, 1 = wall, 2 = grass
     //if (this.raceTrackArray1 == true){
@@ -503,3 +438,4 @@ WorldRacer2020 = {
 }
 
 WorldRacer2020.init();
+
