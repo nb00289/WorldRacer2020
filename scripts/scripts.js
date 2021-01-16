@@ -268,6 +268,8 @@ WorldRacer2020 = {
             car.x = car.x + car.x_velocity;
           } else if (event.keyCode == 65 || event.keyCode == 37) {
             car.x = car.x - car.x_velocity;
+          } else if (event.keyCode == 32 || event.keyCode == 74){
+            WorldRacer2020.lapButton();
           }
        // }
       //}
