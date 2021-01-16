@@ -125,11 +125,13 @@ WorldRacer2020 = {
   },
 
   pause: function () {
+    console.log("pausing the game")
     WorldRacer2020.racing = false;
     WorldRacer2020.countInterval = Infinity;
   },
 
   play: function () {
+    console.log("playing the game")
     WorldRacer2020.racing = true;
     WorldRacer2020.countInterval = 1000;
     },
