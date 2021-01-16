@@ -235,9 +235,9 @@ WorldRacer2020 = {
     WorldRacer2020.renderTrack();
     //WorldRacer2020.laptimer();
     let car = {
-      element: document.getElementById("car"),
-      x: 210,
-      y: 504,
+      elem: document.getElementById("car"),
+      x: 189,
+      y: 546,
       x_velocity: 21,
       y_velocity: 21,
       //color: WorldRacerSelect.carSelect.carChoice,
@@ -251,8 +251,8 @@ WorldRacer2020 = {
     //},
 
     window.onkeydown = function (event) {
-      for (i = 0; i < this.easyTrack; i++) {
-        for (j = 0; j < 38; j++) {
+      //for (i = 0; i < this.easyTrack; i++) {
+        //for (j = 0; j < 38; j++) {
           if (event.keyCode == 83 || event.keyCode == 40) {
             car.y = car.y + car.y_velocity;
           } else if (event.keyCode == 87 || event.keyCode == 38) {
@@ -262,19 +262,18 @@ WorldRacer2020 = {
           } else if (event.keyCode == 65 || event.keyCode == 37) {
             car.x = car.x - car.x_velocity;
           }
-        }
-      }
-      car.element.style.top = car.y + "px";
-      car.element.style.left = car.x + "px";
+       // }
+      //}
+      car.elem.style.top = car.y + "px";
+      car.elem.style.left = car.x + "px";
+      console.log(car.elem.style.top = car.y + "px",car.elem.style.left = car.x + "px");
     }
 
     collision = function () {
-      for (i = 0; i < easyTrack.length; i++) {
-        for (j = 0; j < 38; j++) {
-          if (this.car.z_index == easyTrack[i][j].z_index) {
+      for (i = 0; i < this.easyTrack.length; i++) {
+          if (car.elem.style.top == 42) {
             console.log("Hit a wall");
           }
-        }
       }
     }
 
