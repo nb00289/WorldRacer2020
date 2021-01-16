@@ -1,4 +1,3 @@
-WorldRacerSelect.init();
 WorldRacer2020 = {
   track_container: document.getElementById("Grid"),
   //hard_track_container: document. getElementById("hardGrid"),
@@ -14,12 +13,12 @@ WorldRacer2020 = {
     [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
     [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
     [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2,2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
     [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
     [2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2],
     [2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2],
-    [2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2], 
+    [2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2],
     [2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2],
     [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2],
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
@@ -60,23 +59,23 @@ WorldRacer2020 = {
     [2, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 1, 1, 2, 2],
 
     [2, 1, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 1, 2, 2],
-    
+
     [2, 1, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0, 0, 0, 1, 2, 2],
-    
+
     [2, 1, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0, 0, 0, 1, 2, 2],
-    
+
     [2, 1, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0, 0, 0, 1, 2, 2],
-    
+
     [2, 1, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0, 0, 0, 1, 2, 2],
 
     [2, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 2, 2],
 
     [2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2],
-    
+
     [2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2],
-    
+
     [2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2],
-    
+
     [2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2],
 
     [2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2],
@@ -254,55 +253,57 @@ WorldRacer2020 = {
 
   init: function () {
     //changed to specific track, can esaily be changed back
-    WorldRacer2020.screenChange();
-    WorldRacer2020.lapTimer();
+    //WorldRacer2020.screenChange();
+    //WorldRacer2020.laptimer();
     WorldRacer2020.renderTrack();
-    WorldRacer202.laptimer();
     //WorldRacer2020.laptimer();
     let car = {
-      elem: document.getElementById("car"),
+      element: document.getElementById("car"),
       x: 210,
       y: 504,
       x_velocity: 21,
       y_velocity: 21,
       //color: WorldRacerSelect.carSelect.carChoice,
-    }
-    
-   //moveCar = function () {
-     // while (car.racing === true) {
-       // car.x_pos = car.x_pos + car.x_velocity;
-       // car.y_pos = car.y_pos + car.y_velocity;
-     // }
+    };
+
+    //moveCar = function () {
+    // while (car.racing === true) {
+    // car.x_pos = car.x_pos + car.x_velocity;
+    // car.y_pos = car.y_pos + car.y_velocity;
+    // }
     //},
 
     window.onkeydown = function (event) {
-      if (event.keyCode == 83 || event.keyCode == 40) {
-        car.y = car.y + car.y_velocity;
-      } else if (event.keyCode == 87 || event.keyCode == 38) {
-        car.y = car.y - car.y_velocity;
-      } else if (event.keyCode == 68 || event.keyCode == 39) {
-        car.x = car.x + car.x_velocity;
-      } else if (event.keyCode == 65 || event.keyCode == 37) {
-        car.x = car.x - car.x_velocity;
+      for (i = 0; i < this.easyTrack; i++) {
+        for (j = 0; j < 38; j++) {
+          if (event.keyCode == 83 || event.keyCode == 40) {
+            car.y = car.y + car.y_velocity;
+          } else if (event.keyCode == 87 || event.keyCode == 38) {
+            car.y = car.y - car.y_velocity;
+          } else if (event.keyCode == 68 || event.keyCode == 39) {
+            car.x = car.x + car.x_velocity;
+          } else if (event.keyCode == 65 || event.keyCode == 37) {
+            car.x = car.x - car.x_velocity;
+          }
+        }
       }
-
-      car.elem.style.top = car.y + "px";
-      car.elem.style.left = car.x + "px";
+      car.element.style.top = car.y + "px";
+      car.element.style.left = car.x + "px";
     }
 
     collision = function () {
-      for(i = 0; i < easyTrack.length; i++){
-        for(j = 0; j < 38; j++){
-          if (this.car.z_index == easyTrack[i][j].z_index){
+      for (i = 0; i < easyTrack.length; i++) {
+        for (j = 0; j < 38; j++) {
+          if (this.car.z_index == easyTrack[i][j].z_index) {
             console.log("Hit a wall");
           }
         }
       }
     }
-    
+
     //moveCar();
 
-  }, 
+  },
 
   renderTrack: function () {
     // 0 = race track, 1 = wall, 2 = grass
@@ -321,44 +322,11 @@ WorldRacer2020 = {
         } else if (this.easyTrack[i][j] === 3) {
           tile.classList.add("finish");
         }
+        WorldRacer2020.track_container.append(tile);
       }
-      WorldRacer2020.track_container.append(tile)
-    }
-  },
-
-  //if car hits track - maybe be relpaced with distance
-
-//notes 
- // 0 = race track, 1 = wall, 2 = grass
-    //if (this.raceTrackArray1 == true){
-     //if(raceTrackArray2 == true && raceTrackArray1 == false && 
-    //raceTrackArray3 == false){
-
-  //begins car movement and timer -- moves to new page which moves car and timer
-  startRace: function () {
-    this.startRacing.onclick = some_Function(); 
-  },
-
-  //checks to see if # of laps has been compleated
-  finishRace: function () {
-    stopTimer();
-  },
-
-  startTimer: function () {
-    if (this.countdown == 0) {
-      this.timer.start();
-      this.timer.isRunning == true;
-    }
-  },
-
-  stopTimer: function () {
-    //when car passes finishline x times, timer stops
-    // has check finish function inside it
-    if (x.times.happens) {
-      this.timer.isRunning == false;
     }
   }
+
 }
 
 WorldRacer2020.init();
-
