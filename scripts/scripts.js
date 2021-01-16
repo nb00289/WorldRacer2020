@@ -221,9 +221,9 @@ WorldRacer2020 = {
         minutes = minutes + 1;
       }
       dispTime.innerHTML = minutes + ":" + seconds;
-      console.log(minutes)
-      console.log(seconds)
-      
+      //console.log(minutes)
+      //console.log(seconds)
+
     //}
   }
     var pace = setInterval(count, 1000);
@@ -262,6 +262,8 @@ WorldRacer2020 = {
             car.x = car.x + car.x_velocity;
           } else if (event.keyCode == 65 || event.keyCode == 37) {
             car.x = car.x - car.x_velocity;
+          } else if (event.keyCode == 32 || event.keyCode == 74){
+            WorldRacer2020.lapButton();
           }
        // }
       //}
@@ -271,10 +273,8 @@ WorldRacer2020 = {
     }
 
     collision = function () {
-      for (i = 0; i < this.easyTrack.length; i++) {
-          if (car.elem.style.top +"px" === "42px") {
-            console.log("Hit a wall");
-          }
+      if (car.elem.style.top + "px" === "42px") {
+        console.log("Hit a wall");
       }
     }
 
