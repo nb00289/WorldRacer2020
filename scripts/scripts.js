@@ -235,7 +235,7 @@ WorldRacer2020 = {
     WorldRacer2020.renderTrack();
     //WorldRacer2020.laptimer();
     let car = {
-      element: document.getElementById("car"),
+      elem: document.getElementById("car"),
       x: 189,
       y: 546,
       x_velocity: 21,
@@ -264,18 +264,16 @@ WorldRacer2020 = {
           }
        // }
       //}
-      car.element.style.top = car.y + "px";
-      car.element.style.left = car.x + "px";
+      car.elem.style.top = car.y + "px";
+      car.elem.style.left = car.x + "px";
+      console.log(car.elem.style.top = car.y + "px",car.elem.style.left = car.x + "px");
     }
 
     collision = function () {
       for (i = 0; i < this.easyTrack.length; i++) {
-        for (j = 0; j < 38; j++) {
-          let x = 21 / [i]
-          if (car.elem.style.top = car.y + "px" == "462px") {
+          if (car.elem.style.top == 42) {
             console.log("Hit a wall");
           }
-        }
       }
     }
 
@@ -285,19 +283,19 @@ WorldRacer2020 = {
 
   renderTrack: function () {
     // 0 = race track, 1 = wall, 2 = grass
-    for (i = 0; i < this.medTrack.length; i++) {
+    for (i = 0; i < this.easyTrack.length; i++) {
       for (j = 0; j < 38; j++) {
         let tile = document.createElement("div");
         tile.style.top = i * 21 + "px";
         tile.style.left = j * 21 + "px";
         tile.className = "tile";
-        if (this.medTrack[i][j] === 2) {
+        if (this.easyTrack[i][j] === 2) {
           tile.classList.add("grass");
-        } else if (this.medTrack[i][j] === 0) {
+        } else if (this.easyTrack[i][j] === 0) {
           tile.classList.add("track");
-        } else if (this.medTrack[i][j] === 1) {
+        } else if (this.easyTrack[i][j] === 1) {
           tile.classList.add("wall")
-        } else if (this.medTrack[i][j] === 3) {
+        } else if (this.easyTrack[i][j] === 3) {
           tile.classList.add("finish");
         }
         WorldRacer2020.track_container.append(tile);
