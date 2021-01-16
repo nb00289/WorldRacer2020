@@ -238,11 +238,6 @@ WorldRacer2020 = {
     // when track is loaded in, timer visable on screen counds down from # (10?)
   },
 
-  laptimer : function(){
-    console.log("creating vars")
-    let seconds = 00;
-    let minutes = 00;
-    let dispTime = document.getElementById('lapTimer');
   screenChange : function () {
     console.log("its running")
     let a = document.getElementById('home_div')
@@ -288,7 +283,13 @@ WorldRacer2020 = {
       a.style.display = "block";
     }else{}
   },
-    
+
+  laptimer : function(){
+    console.log("creating vars")
+    let seconds = 00;
+    let minutes = 00;
+    let dispTime = document.getElementById('lapTimer');
+
     function count(){
       //if(gameplay = true){
       seconds += 1;
