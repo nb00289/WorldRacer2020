@@ -81,19 +81,12 @@ WorldRacer2020 = {
     var pace = setInterval(count, 1000);
   },
 
-  lapButton : function(){
-    console.log("counting laps")
-    let laps = [];
-    laps.push = "Lap" + (laps.length + 1) + minutes + ":" + seconds;
-    dispLap.innerHTML = laps;
-  },
-
   init: function () {
     //changed to specific track, can esaily be changed back
     //WorldRacer2020.screenChange();
     //WorldRacer2020.laptimer();
     WorldRacer2020.renderTrack();
-    WorldRacer2020.laptimer();
+    WorldRacer2020.racetimer();
     let car = {
       elem: document.getElementById("car"),
       x: 189,
