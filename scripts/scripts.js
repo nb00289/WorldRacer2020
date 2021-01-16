@@ -223,6 +223,7 @@ WorldRacer2020 = {
       dispTime.innerHTML = minutes + ":" + seconds;
       console.log(minutes)
       console.log(seconds)
+      
     //}
   }
     var pace = setInterval(count, 1000);
