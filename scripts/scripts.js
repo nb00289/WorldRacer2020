@@ -1,5 +1,6 @@
 WorldRacer2020 = {
   track_container: document.getElementById("Grid"),
+  racing: true,
   //hard_track_container: document. getElementById("hardGrid"),
   ovalTrack: [
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
