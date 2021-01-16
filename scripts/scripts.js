@@ -1,29 +1,3 @@
-WorldRacerSelect = {
-  init: function () {
-    screenChange = function () {
-      console.log("its running")
-      let a = document.getElementById('home_div')
-      let b = document.getElementById('diff_div')
-      let c = document.getElementById('race_div')
-  
-      if (document.getElementById("homeToRace").clicked == true) {
-        a.style.display = 'none';
-        c.style.display = 'block';
-        console.log("trying to change")
-      }else if (document.getElementById('homeToDiff').clicked == true) {
-        a.style.display = 'none';
-        b.style.display = 'block';
-        console.log("home to diff")
-      }else if (document.getElementById('raceToDiff').clicked == true) {
-        c.style.display = "none";
-        b.style.display = "block";
-      }else if (document.getElementById('raceToHome').clicked == true) {
-        c.style.display = "none";
-        a.style.display = "block";
-      }else{}
-    }
-  }
-}
 WorldRacerSelect.init();
 WorldRacer2020 = {
   track_container: document.getElementById("Grid"),
@@ -234,19 +208,13 @@ WorldRacer2020 = {
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2],
   ],
 
-  countdown: {
-    // when track is loaded in, timer visable on screen counds down from # (10?)
-  },
-
   screenChange : function () {
     console.log("its running")
     let a = document.getElementById('home_div')
     let b = document.getElementById('diff_div')
-    let c = document.getElementById('car_div')
-    let d = document.getElementById('track_div')
-    let e = document.getElementById('race_div')
+    let c = document.getElementById('race_div')
 
-    if (document.getElementById("homeToCar").clicked == true) {
+    if (document.getElementById("homeToRace").clicked == true) {
       a.style.display = 'none';
       c.style.display = 'block';
       console.log("trying to change")
@@ -254,40 +222,19 @@ WorldRacer2020 = {
       a.style.display = 'none';
       b.style.display = 'block';
       console.log("home to diff")
-    }else if (document.getElementById('carToHome').clicked == true) {
-      c.style.display = "none";
-      a.style.display = "block";
-    }else if (document.getElementById('carToTrack').clicked == true) {
-      c.style.display = "none";
-      d.style.display = "block";
-    }else if (document.getElementById('trackToHome').clicked == true) {
-      d.style.display = "none";
-      a.style.display = "block";
-    }else if (document.getElementById('trackToCar').clicked == true) {
-      d.style.display = "none";
-      c.style.display = "block";
-    }else if (document.getElementById('trackToRace').clicked == true) {
-      d.style.display = "none";
-      e.style.display = "block";
-    }else if (document.getElementById('raceToTrack').clicked == true) {
-      e.style.display = "none";
-      d.style.display = "block";
-    }else if (document.getElementById('raceToCar').clicked == true) {
-      e.style.display = "none";
-      c.style.display = "block";
     }else if (document.getElementById('raceToDiff').clicked == true) {
-      e.style.display = "none";
+      c.style.display = "none";
       b.style.display = "block";
     }else if (document.getElementById('raceToHome').clicked == true) {
-      e.style.display = "none";
+      c.style.display = "none";
       a.style.display = "block";
     }else{}
   },
 
   laptimer : function(){
     console.log("creating vars")
-    let seconds = 00;
-    let minutes = 00;
+    let seconds = 0;
+    let minutes = 0;
     let dispTime = document.getElementById('lapTimer');
 
     function count(){
@@ -307,7 +254,8 @@ WorldRacer2020 = {
 
   init: function () {
     //changed to specific track, can esaily be changed back
-    //WorldRacer2020.renderTrack();
+    WorldRacer2020.screenChange();
+    WorldRacer2020.lapTimer();
     WorldRacer2020.renderTrack();
     //WorldRacer2020.laptimer();
     let car = {
