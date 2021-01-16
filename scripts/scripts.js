@@ -64,7 +64,7 @@ WorldRacer2020 = {
 
   ],
   
-  laptimer : function(){
+  racetimer : function(){
     let seconds = 0;
     let minutes = 0;
     let dispTime = document.getElementById('timerDisplay');
@@ -81,7 +81,7 @@ WorldRacer2020 = {
   }
     var pace = setInterval(count, 1000);
   },
-  
+
   init: function () {
     //changed to specific track, can esaily be changed back
     //WorldRacer2020.screenChange();
