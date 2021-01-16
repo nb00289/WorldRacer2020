@@ -207,7 +207,7 @@ WorldRacer2020 = {
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2],
   ],
 
-  laptimer : function(){
+  racetimer : function(){
     let seconds = 0;
     let minutes = 0;
     let dispTime = document.getElementById('timerDisplay');
@@ -250,7 +250,7 @@ WorldRacer2020 = {
     //WorldRacer2020.screenChange();
     //WorldRacer2020.laptimer();
     WorldRacer2020.renderTrack();
-    WorldRacer2020.laptimer();
+    WorldRacer2020.racetimer();
     let car = {
       elem: document.getElementById("car"),
       x: 189,
