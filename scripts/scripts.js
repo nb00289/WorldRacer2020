@@ -271,7 +271,7 @@ WorldRacer2020 = {
 
     collision = function () {
       for (i = 0; i < this.easyTrack.length; i++) {
-          if (car.elem.style.top == 42) {
+          if (car.elem.style.top +"px" === "42px") {
             console.log("Hit a wall");
           }
       }
