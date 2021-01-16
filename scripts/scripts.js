@@ -211,7 +211,7 @@ WorldRacer2020 = {
     console.log("creating vars")
     let seconds = 0;
     let minutes = 0;
-    let dispTime = document.getElementById('lapTimer');
+    let dispTime = document.getElementById('timerDisplay');
 
     function count(){
       //if(gameplay = true){
