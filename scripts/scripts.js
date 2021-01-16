@@ -207,27 +207,45 @@ WorldRacer2020 = {
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2],
   ],
 
-  screenChange : function () {
-    console.log("its running")
-    let a = document.getElementById('home_div')
-    let b = document.getElementById('diff_div')
-    let c = document.getElementById('race_div')
+  homeToRace : function () {
+    document.getElementById('home_div').style.display = 'none';
+    document.getElementById('race_div').style.diplay = 'block';
+    },
 
-    if (document.getElementById("homeToRace").clicked == true) {
-      a.style.display = 'none';
-      c.style.display = 'block';
-      console.log("trying to change")
-    }else if (document.getElementById('homeToDiff').clicked == true) {
-      a.style.display = 'none';
-      b.style.display = 'block';
-      console.log("home to diff")
-    }else if (document.getElementById('raceToDiff').clicked == true) {
-      c.style.display = "none";
-      b.style.display = "block";
-    }else if (document.getElementById('raceToHome').clicked == true) {
-      c.style.display = "none";
-      a.style.display = "block";
-    }else{}
+  homeToDiff : function () {
+    let a = document.getElementById('home_div').style.display();
+    let b = document.getElementById('diff_div').style.diplay();
+    if(a='block' && b =='none'){
+      b = 'block';
+      a = 'none';
+    }
+  },
+
+  diffToHome : function () {
+    let a = document.getElementById('diff_div').style.display
+    let b = document.getElementById('home_div').style.diplay
+    if(a='block' && b =='none'){
+      b = 'block'
+      a = 'none'
+    }
+  },
+
+  raceToDiff : function () {
+    let a = document.getElementById('race_div').style.display
+    let b = document.getElementById('diff_div').style.diplay
+    if(a='block' && b =='none'){
+      b = 'block'
+      a = 'none'
+    }
+  },
+
+  raceToHome : function () {
+    let a = document.getElementById('race_div').style.display
+    let b = document.getElementById('home_div').style.diplay
+    if(a='block' && b =='none'){
+      b = 'block'
+      a = 'none'
+    }
   },
 
   laptimer : function(){

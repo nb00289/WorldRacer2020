@@ -1,9 +1,9 @@
 #home_div{
-  display: none;
+  display: block;
 }
 
 #race_div{
-  display: block;
+  display: none;
 }
  
 #diff_div{
