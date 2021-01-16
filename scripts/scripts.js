@@ -1,6 +1,7 @@
 WorldRacer2020 = {
   track_container: document.getElementById("Grid"),
   racing: true,
+  countInterval: 1000, 
   //hard_track_container: document. getElementById("hardGrid"),
   easyTrack: [
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
@@ -62,9 +63,7 @@ WorldRacer2020 = {
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
 
   ],
-  
-  laptimer : function(){
-    var countInterval = 1000;
+    
   racetimer : function(){
     let seconds = 0;
     let minutes = 0;
@@ -80,7 +79,7 @@ WorldRacer2020 = {
       dispTime.innerHTML = minutes + ":" + seconds;
     //}
   }
-    var pace = setInterval(count, countInterval);
+    var pace = setInterval(count, WorldRacer2020.countInterval);
   },
 
   init: function () {
@@ -91,8 +90,8 @@ WorldRacer2020 = {
     WorldRacer2020.racetimer();
     let car = {
       elem: document.getElementById("car"),
-      x: 189,
-      y: 546,
+      x: 210,
+      y: 525,
       x_velocity: 21,
       y_velocity: 21,
       //color: WorldRacerSelect.carSelect.carChoice,
@@ -106,10 +105,6 @@ WorldRacer2020 = {
     //},
 
     window.onkeydown = function (event) {
-      //for (i = 0; i < this.easyTrack; i++) {
-      //for (j = 0; j < 38; j++) {
-      //if (event.keyCode = 80) {
-        //WorldRacer2020.pause();
        if (WorldRacer2020.racing == true) {
         if (event.keyCode == 83 || event.keyCode == 40) {
           car.y = car.y + car.y_velocity;
@@ -119,10 +114,7 @@ WorldRacer2020 = {
           car.x = car.x + car.x_velocity;
         } else if (event.keyCode == 65 || event.keyCode == 37) {
           car.x = car.x - car.x_velocity;
-        } else if (event.keyCode == 32 || event.keyCode == 74) {
-          WorldRacer2020.lapButton();
         }
-      } else if (WorldRacer2020.racing == false) {
       }
        // }
       //}
@@ -130,23 +122,17 @@ WorldRacer2020 = {
       car.elem.style.left = car.x + "px";
       console.log(car.elem.style.top = car.y + "px",car.elem.style.left = car.x + "px");
     }
-
-    collision = function () {
-        console.log("making it here")
-          if (car.elem.style.top <= 42) {
-            seconds + 5;
-          }
-    }
-
-    //moveCar();
-
   },
-  pausePlay: function(){
-    if(racing == true){
-      racing = false;
-      countInterval = null;
-    }
+
+  pause: function () {
+    WorldRacer2020.racing = false;
+    WorldRacer2020.countInterval = Infinity;
   },
+
+  play: function () {
+    WorldRacer2020.racing = true;
+    WorldRacer2020.countInterval = 1000;
+    },
 
   renderTrack: function () {
     // 0 = race track, 1 = wall, 2 = grass
