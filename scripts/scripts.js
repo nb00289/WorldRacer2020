@@ -1,7 +1,7 @@
 WorldRacer2020 = {
   track_container: document.getElementById("Grid"),
   racing: true,
-  countInterval: 1000, 
+  countInterval: clearInterval(), 
   //hard_track_container: document. getElementById("hardGrid"),
   easyTrack: [
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
@@ -112,6 +112,7 @@ WorldRacer2020 = {
           car.y = car.y - car.y_velocity;
         } else if (event.keyCode == 68 || event.keyCode == 39) {
           car.x = car.x + car.x_velocity;
+          WorldRacer2020.setInterval = 1000;
         } else if (event.keyCode == 65 || event.keyCode == 37) {
           car.x = car.x - car.x_velocity;
         }
@@ -126,7 +127,7 @@ WorldRacer2020 = {
 
   pause: function () {
     WorldRacer2020.racing = false;
-    WorldRacer2020.countInterval = Infinity;
+    WorldRacer2020.countInterval = 1000000;
   },
 
   play: function () {
