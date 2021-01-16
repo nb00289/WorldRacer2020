@@ -208,7 +208,6 @@ WorldRacer2020 = {
   ],
 
   laptimer : function(){
-    console.log("creating vars")
     let seconds = 0;
     let minutes = 0;
     let dispTime = document.getElementById('timerDisplay');
@@ -221,12 +220,18 @@ WorldRacer2020 = {
         minutes = minutes + 1;
       }
       dispTime.innerHTML = minutes + ":" + seconds;
-      console.log(minutes)
-      console.log(seconds)
-      
     //}
   }
     var pace = setInterval(count, 1000);
+  },
+
+  lapButton : function(){
+    console.log("counting laps")
+    let laps = [];
+    laps.push = "Lap" + (laps.length + 1) + minutes + ":" + seconds;
+    seconds = 0;
+    minutes = 0;
+    dispLap.innerHTML = laps;
   },
 
   init: function () {
@@ -254,6 +259,7 @@ WorldRacer2020 = {
     window.onkeydown = function (event) {
       //for (i = 0; i < this.easyTrack; i++) {
         //for (j = 0; j < 38; j++) {
+
           if (event.keyCode == 83 || event.keyCode == 40) {
             car.y = car.y + car.y_velocity;
           } else if (event.keyCode == 87 || event.keyCode == 38) {
@@ -271,11 +277,10 @@ WorldRacer2020 = {
     }
 
     collision = function () {
-      for (i = 0; i < this.easyTrack.length; i++) {
-          if (car.elem.style.top +"px" === "42px") {
-            console.log("Hit a wall");
+        console.log("making it here")
+          if (car.elem.style.top <= 42) {
+            seconds + 5;
           }
-      }
     }
 
     //moveCar();
